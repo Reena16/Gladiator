@@ -1,0 +1,55 @@
+<div class="container">
+    <input type='radio' name='rb' (click)='change(true)' value='true' checked />EMI Calculator
+    <input type='radio' name='rb' (click)='change(false)' value='false' />Eligibility Calculator
+</div>
+<div *ngIf='flag'>
+    <h2 class="header">
+        EMI Calculator
+    </h2>
+    <form #calForm='ngForm' (ngSubmit)='calculateemi(calForm)'>
+        <div class="container">
+            <!-- <label for="fname">Loan Amount: </label><br> -->
+            <p>Loan Amount( ₹ ) <span style="float: right;">{{loanamount}}</span></p>
+
+            <!-- <input type="text"  placeholder="{{loanamount}}" name="loanamount"> -->
+            <input type="range" min="50000" max="1500000" value="50000" [(ngModel)]='loanamount' name="loanamount"
+                class="slider">
+            <br>
+            <!-- <label for="fname">Tenure: </label><br> -->
+            <p>Tenure( Years ) <span style="float: right; box-sizing: border-box;">{{tenure}}</span></p>
+            <!-- <input type="text" [(ngModel)]='tenure' name="tenure"><br> -->
+            <input type="range" min="1" max="30" value="15" [(ngModel)]='tenure' name="tenure" class="slider">
+            <!-- <label for="fname">Rate Of Interest:</label><br> -->
+            <p>Rate Of Interest( % )<span style="float: right; box-sizing: border-box;">{{roi}}</span></p>
+            <!-- <input type="text" value="8.5" name="roi" readonly><br> -->
+            <input type="range" min="5" max="24" step="0.5" value="5" [(ngModel)]='roi' name="roi" class="slider">
+            <!-- <label for="fname">Calculate:</label><br> (click)=calculate()-->
+            <p><button id="calculate">Calculate</button><br></p>
+            <!-- <label for="fname">EMI:</label><br> -->
+            <p *ngIf='flag1' style="text-align: justify;"> Your EMI for ₹{{loanamount}} for {{tenure}} years at {{roi}}%
+                is</p>
+            <h2 *ngIf='flag1'>₹{{emi}}</h2>
+            <!-- <h1 *ngIf='flag1'> Pie Chart</h1>
+            <p *ngIf='flag1' class="piechart"></p> -->
+        </div>
+    </form>
+</div>
+<div *ngIf='!flag'>
+    <h2 class="header">
+        Eligibility Calculator
+    </h2>
+    <form #eligForm='ngForm' (ngSubmit)='calculateEligibility(eligForm)'>
+        <div class="container">
+            <!-- <label for="fname">Loan Amount: </label><br> -->
+            <p>Monthly Income <span style="float: right;">{{monthlyincome}}</span></p>
+            <!-- <input type="text" [(ngModel)]='monthlyincome' name="monthlyincome"> -->
+            <input type="range" min="10000" max="15000000" value="50000" [(ngModel)]='monthlyincome'
+                name="monthlyincome" class="slider">
+            <br>
+            <p><button id="calculate">Calculate</button><br></p>
+            <!-- <label for="fname">EMI:</label><br> -->
+            <p *ngIf='flag2'>With ₹{{monthlyincome}} p.m. you are eligible for a loan of</p>
+            <h2 *ngIf='flag2'>₹{{eligibility}}</h2>
+        </div>
+    </form>
+</div>
