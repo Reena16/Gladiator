@@ -21,6 +21,8 @@
     "@angular/router": "~10.0.6",
     "highcharts": "^8.1.2",
     "highcharts-angular": "^2.7.0",
+    "ng-image-slider": "^2.6.1",
+    "ng-simple-slideshow": "^1.2.9",
     "number-to-words": "^1.2.4",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
