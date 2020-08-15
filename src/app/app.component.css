@@ -29,7 +29,7 @@
   /* Style the top navigation bar */
   .topnav {
     overflow: hidden; /* if the content is exceeding the size of your div it will not dispaly the extra content MEANS scroll bar lag jaega*/
-    background-color:turquoise;
+    background-color:#3b526f;
     /* background-color: white; */
     /* width: 80%; */
     /* margin: auto; */
@@ -65,6 +65,86 @@
   }
   .topnav a:hover {
     text-decoration: underline;
+  }
+
+
+
+  .navbar {
+    overflow: hidden; /* if the content is exceeding the size of your div it will not dispaly the extra content MEANS scroll bar lag jaega*/
+    background-color:#3b526f;
+    /* background-color: white; */
+    /* width: 80%; */
+    /* margin: auto; */
+    max-height: 50px;
+    height: 10%;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+    float: left;
+    
+    color: white;
+    text-align: center;
+    padding: 14px 25px;
+    text-decoration: none;
+  }
+  
+  /* The dropdown container */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a red background color to navbar links on hover */
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    text-decoration: underline;
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    font-weight: bold;
+  
+    background-color: white;
+    min-width: 115px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
   }
 
   .homeloan {
@@ -107,8 +187,8 @@
   .footer{
     padding: 20px;
     text-align: center;
-    color: black;
-    background: darkgrey;
+    color: white;
+    background: #1D1B1B;
     /* 2f2f31 */
     margin-top: 20px;
     /* width: 80%; */
@@ -278,75 +358,5 @@
     justify-content: center; 
     align-items: center; 
 }
-.navbar {
-  height: 56px;
-  overflow: hidden;
-  background-color: #333;
-  font-family: Arial;
-}
 
-/* Links inside the navbar */
-.navbar a {
-  float: left;
-  font-size: 20px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* The dropdown container */
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-/* Dropdown button */
-.dropdown .dropbtn {
-  font-size: 20px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
-}
-
-/* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color:grey;
-}
-
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  font-weight: bold;
-
-  background-color: lightgray;
-  min-width: 115px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-/* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
   
