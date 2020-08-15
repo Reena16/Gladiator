@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "HomeLoan"
+    }
+  },
+  "defaultProject": "HomeLoan",
+  "cli": {
+    "analytics": false
+  }
 }

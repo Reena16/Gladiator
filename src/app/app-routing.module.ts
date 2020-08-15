@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 
 const routes: Routes = [
   {
@@ -12,7 +14,18 @@ const routes: Routes = [
   },
   {
     path:'calculatorLink',component:CalculatorComponent
+  },
+  {
+    path:'loginLink',component:LoginPageComponent
+  },
+  {
+    path:'adminLink',component:AdminLoginComponent
+  },
+  {
+    path:'loginLink',component:CalculatorComponent
   }
+  
+
 ];
 
 @NgModule({
