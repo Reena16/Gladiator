@@ -8,6 +8,7 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 
+import { FaqPageComponent } from "./faq-page/faq-page.component";
 
 
 @NgModule({
@@ -16,7 +17,9 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
     HomePageComponent,
     CalculatorComponent,
     LoginPageComponent,
-    AdminLoginComponent
+    AdminLoginComponent,
+    FaqPageComponent
+    
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,8 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 
+import { FaqPageComponent } from "./faq-page/faq-page.component";
+
 const routes: Routes = [
   {
     path:'',component:HomePageComponent
@@ -23,7 +25,12 @@ const routes: Routes = [
   },
   {
     path:'loginLink',component:CalculatorComponent
+  },
+  
+  {
+    path:'faqLink',component:FaqPageComponent
   }
+
   
 
 ];
