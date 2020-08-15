@@ -8,8 +8,6 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
