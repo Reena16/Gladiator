@@ -12,6 +12,9 @@ const routes: Routes = [
   },
   {
     path:'calculatorLink',component:CalculatorComponent
+  },
+  {
+    path:'loginLink',component:CalculatorComponent
   }
 ];
 

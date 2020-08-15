@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { CalculatorComponent } from './calculator/calculator.component';
-
+import { NgImageSliderModule } from 'ng-image-slider';
+import {SlideshowModule} from 'ng-simple-slideshow';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { CalculatorComponent } from './calculator/calculator.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgImageSliderModule,
+    SlideshowModule
   ],
   providers: [],
   bootstrap: [AppComponent]
