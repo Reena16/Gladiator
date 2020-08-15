@@ -2,43 +2,49 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .loginImg{
-    width: 50%;
-    height: 373px;
+    width: 100%;
+    height: 470px;
     
 }
  .loginBox{
+    margin: auto;
     background-color:lightgray;
-    width: 682px;
-    height:373px;
-    background-image: url("/assets/AdminLogin.jpg");
-    float: right;
+    width: 100%;
+    height:500px;
+    background-image: url("/assets/LoginBox.jpg");
+    
     text-align: center;
     
    
 }
 .main{
     width :100%;
-    height: 460px;
-    background-color:crimson;
-}
-.bottom{
-    width: 100%;
-    height: 140px;
-    background-color:crimson;
-    color: white;
-    font-style: italic;
-    font-weight: bolder;
-    font-size: 30px;
-    text-align: center;
-    
-    font-family: 'sans-serif';
+    height:1000px;
+    background-color:skyblue;
 
 }
-form{
-    float: right;
-}
+.container {
+    position: relative;
+    text-align: center;
+    color:darkred;
+  }
+  .centered {
+    font-family:  'Times New Roman', Times, serif;  
+    text-align: center; 
+    font-weight: bold; 
+    font-size: 60px;
+    font-style: italic;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-60%, -70%);
+  }
+
+
 .header{
-    font-family: cursive
+    font-family: cursive;
+    color: white;
+    font-weight: bold;
 }
 .login{
     top: 60px;
@@ -55,7 +61,7 @@ form{
     margin-left: 6em;
  } */
  input[type=text], input[type=password], input[type=email], input[type=tel] {
-    width: 50%;
+    width: 25%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -66,28 +72,15 @@ form{
   input:focus {
     border: 3px soid lightgray;
   }
-  #lb1{
-      font-weight: bold;
-      color: maroon;
-      font-size: 25px;
-      top: 150px;
-      left: 55%;
-      font-family:  Calibri;
-
-  }
-  #lb2{
-    font-weight: bold;
-    color: maroon;
-      font-size: 25px;
-      left:53%;
-      top:205px;
-      font-family: Calibri;
-  }
+  
+  
   a{
+      font-size: 22px;
+      color: rgb(56, 30, 25);
       text-decoration: none;
       padding: 4px,10px;
       font-weight: bolder;
-      background-color: powderblue;
+      
   }
   label{
      font-size: 20px;
@@ -105,7 +98,7 @@ form{
     font-size: 16px;
     border-radius: 12px;
     margin: 0;
-    width:40%;
+    width:20%;
     font-weight: bold;
     font-size: 20px;
   
