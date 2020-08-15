@@ -7,11 +7,25 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
-
-import { Aboutus1Component } from './aboutus1/aboutus1.component';
-
+import { enableProdMode } from '@angular/core'
+import { FusionChartsModule } from 'angular-fusioncharts';
 import { FaqPageComponent } from "./faq-page/faq-page.component";
 
+
+// Load FusionCharts
+import * as FusionCharts from 'fusioncharts';
+// Load Charts module
+import * as Charts from 'fusioncharts/fusioncharts.charts';
+// Load themes
+import * as FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
+import { BankInfoComponent } from './bank-info/bank-info.component';
+
+
+FusionChartsModule.fcRoot(
+  FusionCharts,
+  Charts,
+  FusionTheme
+)
 
 @NgModule({
   declarations: [
@@ -21,15 +35,15 @@ import { FaqPageComponent } from "./faq-page/faq-page.component";
     LoginPageComponent,
     AdminLoginComponent,
     FaqPageComponent,
-    Aboutus1Component
+    BankInfoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    
+    FusionChartsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

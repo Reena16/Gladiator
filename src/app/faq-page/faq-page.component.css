@@ -15,6 +15,7 @@ section{
     max-width: 100rem;
     margin: 2px auto;
     padding: 2px 0;
+    background-color: white;
 }
 .accordion-item{
     background-color: ghostwhite;
