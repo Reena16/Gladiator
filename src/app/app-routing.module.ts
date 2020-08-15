@@ -5,7 +5,7 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { FaqPageComponent } from './faq-page/faq-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
-
+import { BankInfoComponent } from './bank-info/bank-info.component';
 
 const routes: Routes = [
   {
@@ -25,6 +25,9 @@ const routes: Routes = [
   },
   {
     path:'adminLink',component:AdminLoginComponent
+  },
+  {
+    path:'infoLink',component:BankInfoComponent
   }
 
 ];
