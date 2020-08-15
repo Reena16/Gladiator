@@ -20,7 +20,7 @@ import { FaqPageComponent } from "./faq-page/faq-page.component";
     CalculatorComponent,
     LoginPageComponent,
     AdminLoginComponent,
-    
+    FaqPageComponent,
     Aboutus1Component
   ],
   imports: [
