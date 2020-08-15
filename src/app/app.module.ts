@@ -8,6 +8,8 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 
+import { Aboutus1Component } from './aboutus1/aboutus1.component';
+
 import { FaqPageComponent } from "./faq-page/faq-page.component";
 
 
@@ -18,8 +20,8 @@ import { FaqPageComponent } from "./faq-page/faq-page.component";
     CalculatorComponent,
     LoginPageComponent,
     AdminLoginComponent,
-    FaqPageComponent
     
+    Aboutus1Component
   ],
   imports: [
     BrowserModule,
