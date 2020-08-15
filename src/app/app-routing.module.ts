@@ -16,14 +16,13 @@ const routes: Routes = [
     path:'calculatorLink',component:CalculatorComponent
   },
   {
-<<<<<<< HEAD
     path:'loginLink',component:LoginPageComponent
   },
   {
     path:'adminLink',component:AdminLoginComponent
-=======
+  },
+  {
     path:'loginLink',component:CalculatorComponent
->>>>>>> 14fa6c5e9c63faa9b25df058ad29542f67a6fa57
   }
   
 

@@ -103,7 +103,6 @@
   .homeloan .btn:hover {
     background-color: rgb(105, 97, 97);
   }
-<<<<<<< HEAD
 
   .footer{
     padding: 20px;
@@ -114,8 +113,7 @@
     margin-top: 20px;
     /* width: 80%; */
     margin: auto;
-=======
-  
+  }
   .btn1{
     position: absolute;
     top: 32.25%;
@@ -130,7 +128,6 @@
     cursor: pointer;
     border-radius: 5px;
     text-align: center;
->>>>>>> 14fa6c5e9c63faa9b25df058ad29542f67a6fa57
   }
   
   
@@ -276,7 +273,6 @@
 
 
 
-<<<<<<< HEAD
 .piechart { 
     display: flex; 
     justify-content: center; 
@@ -353,6 +349,4 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
-=======
   
->>>>>>> 14fa6c5e9c63faa9b25df058ad29542f67a6fa57
