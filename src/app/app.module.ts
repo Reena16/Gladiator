@@ -7,10 +7,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
-import { AboutusComponent } from './aboutus/aboutus.component';
 import { Aboutus1Component } from './aboutus1/aboutus1.component';
-
-
 
 @NgModule({
   declarations: [
@@ -19,14 +16,12 @@ import { Aboutus1Component } from './aboutus1/aboutus1.component';
     CalculatorComponent,
     LoginPageComponent,
     AdminLoginComponent,
-    AboutusComponent,
     Aboutus1Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
