@@ -5,7 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { CalculatorComponent } from './calculator/calculator.component';
-import { FaqPageComponent } from './faq-page/faq-page.component';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+
 
 
 @NgModule({
@@ -13,12 +15,14 @@ import { FaqPageComponent } from './faq-page/faq-page.component';
     AppComponent,
     HomePageComponent,
     CalculatorComponent,
-    FaqPageComponent
+    LoginPageComponent,
+    AdminLoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

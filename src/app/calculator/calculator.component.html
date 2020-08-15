@@ -1,12 +1,29 @@
+<div *ngIf='flag'>
+    <img src="assets/home-loan-desk.jpg" alt="homeLoan" width="1500">
+</div>
+<div *ngIf='!flag'>
+    <img src="assets/home-loan-desk1.jpg" alt="homeLoan" width="1500">
+</div>
 <div class="container">
     <input type='radio' name='rb' (click)='change(true)' value='true' checked />EMI Calculator
     <input type='radio' name='rb' (click)='change(false)' value='false' />Eligibility Calculator
 </div>
 <div *ngIf='flag'>
+    <h2 style="margin-left: 50px;margin-right: 50px;text-shadow: black 2px 2px 10px;">Home Loan EMI Calculator</h2>
+    <p style="margin-left: 50px;margin-right: 50px;text-align: justify;">
+        Buying a house is a financial goal and to accomplish it, a home loan can come to your aid. 
+        A loan provides financial resource. 
+        With an Equated Monthly Instalment (EMI) facility, repayments become comfortable.<br>
+        That said, before you avail of a home loan, as a prudent loan planning exercise, always assess how much the EMI will be. After all, availing a home loan is an important financial decision.<br>
+        The EMI (or Equated Monthly Instalment) of your loan consists of the principal portion and the interest. Therefore, EMI = principal amount + interest paid on the loan.<br>
+        
+        The EMI, usually, remains fixed for the entire tenure of your loan and it is to be repaid over the tenure of the loan on a monthly basis. During the initial years of your loan tenure, you pay more towards interest. Gradually, as you repay the loan, a higher portion is adjusted towards the principal component. This is because EMIs are computed on a reducing balance method, which works in your favour as a borrower.
+        <br>
+        Remember, the interest rate and your loan tenure are the vital deciding factors for your loan EMI.</p>
     <h2 class="header">
         EMI Calculator
     </h2>
-    <form #calForm='ngForm' (ngSubmit)='calculateemi(calForm)'>
+    <form #calForm='ngForm' (ngSubmit)='calculateemi(calForm)' style="border-top:solid black 1px;">
         <div class="container">
             <!-- <label for="fname">Loan Amount: </label><br> -->
             <p>Loan Amount( ₹ ) <span style="float: right;">{{loanamount}}</span></p>
@@ -35,10 +52,18 @@
     </form>
 </div>
 <div *ngIf='!flag'>
+    <h2 style="margin-left: 50px;margin-right: 50px;text-shadow: black 2px 2px 10px;">Home Loan Eligibility Calculator</h2>
+    <p style="margin-left: 50px;margin-right: 50px; line-height: 25px; text-align: justify;">
+        Your dream home is now within your reach with Bank Of LTI Bank Home Loans. We offer higher loan amount on your income. 
+        Your home loan eligibility can be further enhanced by including income of the co-applicant(s) of your Home Loan.<br>
+        Home Loan eligibility is calculated after considering various factors including monthly income, fixed monthly obligation, 
+        current age, retirement age etc. Your home loan eligibility can also be considered an indicator of your 
+        home loan affordability.  <br>
+        Use Bank Of LTI Home Loan Eligibility Calculator to calculate the amount that you can borrow.</p>
     <h2 class="header">
         Eligibility Calculator
     </h2>
-    <form #eligForm='ngForm' (ngSubmit)='calculateEligibility(eligForm)'>
+    <form #eligForm='ngForm' (ngSubmit)='calculateEligibility(eligForm)' style="border-top:solid black 1px;">
         <div class="container">
             <!-- <label for="fname">Loan Amount: </label><br> -->
             <p>Monthly Income <span style="float: right;">{{monthlyincome}}</span></p>

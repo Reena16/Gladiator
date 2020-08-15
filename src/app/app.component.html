@@ -4,23 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
   <a href="index.html">
     <img src="assets/banklogo.png"
         style="float: left; width: 100px; height: 50px; border-bottom: 3px solid black; border-top: 3px solid black; border-left: 3px solid black;"></a>
-<div class="topnav">
-    <ul>
-        <li><a href=#>About Us</a></li>
-        <li><a routerLink='/calculatorLink'>Calculator</a></li>
-        <li><a href=#>Application</a></li>
-        <li><a href=#>Login</a></li>
-        <li><a routerLink='/FaqLink'>FAQ</a></li>
-    </ul>
-</div>
-<div>
+        <div class="navbar">
+          <a href="#">About Us</a>
+          <a routerLink='/calculatorLink'>Calculator</a>
+          <a href=#>Application</a>
+
+          <div class="dropdown">
+            <button class="dropbtn">Login
+              <i class="fa fa-caret-down"></i>
+        
+            </button>
+            <div class="dropdown-content">
+              <a routerLink='/loginLink'>User</a>
+              <a routerLink='/adminLink'>Admin</a>
+              
+            </div>
+           
+          </div>
+          <a href=#>FAQ</a>
+        </div>
+      
+<div> 
   <router-outlet> </router-outlet>
-</div>
+</div> 
 <div class="footer">
    <p>© 2020 Larsen & Toubro Infotech Bank Limited</p>
 </div>
