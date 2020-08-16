@@ -11,68 +11,78 @@
 <div *ngIf='flag'>
     <h2 style="margin-left: 50px;margin-right: 50px;text-shadow: black 2px 2px 10px;">Home Loan EMI Calculator</h2>
     <p style="margin-left: 50px;margin-right: 50px;text-align: justify;">
-        Buying a house is a financial goal and to accomplish it, a home loan can come to your aid. 
-        A loan provides financial resource. 
+        Buying a house is a financial goal and to accomplish it, a home loan can come to your aid.
+        A loan provides financial resource.
         With an Equated Monthly Instalment (EMI) facility, repayments become comfortable.<br>
-        That said, before you avail of a home loan, as a prudent loan planning exercise, always assess how much the EMI will be. After all, availing a home loan is an important financial decision.<br>
-        The EMI (or Equated Monthly Instalment) of your loan consists of the principal portion and the interest. Therefore, EMI = principal amount + interest paid on the loan.<br>
-        
-        The EMI, usually, remains fixed for the entire tenure of your loan and it is to be repaid over the tenure of the loan on a monthly basis. During the initial years of your loan tenure, you pay more towards interest. Gradually, as you repay the loan, a higher portion is adjusted towards the principal component. This is because EMIs are computed on a reducing balance method, which works in your favour as a borrower.
+        That said, before you avail of a home loan, as a prudent loan planning exercise, always assess how much the EMI
+        will be. After all, availing a home loan is an important financial decision.<br>
+        The EMI (or Equated Monthly Instalment) of your loan consists of the principal portion and the interest.
+        Therefore, EMI = principal amount + interest paid on the loan.<br>
+
+        The EMI, usually, remains fixed for the entire tenure of your loan and it is to be repaid over the tenure of the
+        loan on a monthly basis. During the initial years of your loan tenure, you pay more towards interest. Gradually,
+        as you repay the loan, a higher portion is adjusted towards the principal component. This is because EMIs are
+        computed on a reducing balance method, which works in your favour as a borrower.
         <br>
         Remember, the interest rate and your loan tenure are the vital deciding factors for your loan EMI.</p>
     <h2 class="header">
         EMI Calculator
     </h2>
-    <form #calForm='ngForm' (ngSubmit)='calculateemi(calForm)' style="border-top:solid black 1px;">
-        <div class="container">
-            <!-- <label for="fname">Loan Amount: </label><br> -->
-            <p>Loan Amount( ₹ ) <span style="float: right;">{{loanamount}}</span></p>
-
-            <!-- <input type="text"  placeholder="{{loanamount}}" name="loanamount"> -->
-            <input type="range" min="50000" max="1500000" value="50000" [(ngModel)]='loanamount' name="loanamount"
-                class="slider">
+    <form class="emiform" #calForm='ngForm' (ngSubmit)='calculateemi(calForm)' style="border-top:solid black 1px;">
+        <div class="container" style="line-height: 30px;">
+            <!-- <label for="fname">Loan Amount( ₹ )</label><br> -->
+            <p>Loan Amount( ₹ ) <span style="float: right;"><input type="text" [(ngModel)]='loanamount'
+                        name="loanamount" required></span></p>
+            <input type="range" min="50000" max="50000000" value="50000" [(ngModel)]='loanamount' name="loanamount"
+                class="slider" required>
             <br>
-            <!-- <label for="fname">Tenure: </label><br> -->
-            <p>Tenure( Years ) <span style="float: right; box-sizing: border-box;">{{tenure}}</span></p>
-            <!-- <input type="text" [(ngModel)]='tenure' name="tenure"><br> -->
-            <input type="range" min="1" max="30" value="15" [(ngModel)]='tenure' name="tenure" class="slider">
-            <!-- <label for="fname">Rate Of Interest:</label><br> -->
-            <p>Rate Of Interest( % )<span style="float: right; box-sizing: border-box;">{{roi}}</span></p>
-            <!-- <input type="text" value="8.5" name="roi" readonly><br> -->
-            <input type="range" min="5" max="24" step="0.5" value="5" [(ngModel)]='roi' name="roi" class="slider">
-            <!-- <label for="fname">Calculate:</label><br> (click)=calculate()-->
-            <p><button id="calculate">Calculate</button><br></p>
-            <!-- <label for="fname">EMI:</label><br> -->
+            <p>Tenure( Years ) <span style="float: right; box-sizing: border-box;"><input type="text"
+                        [(ngModel)]='tenure' name="tenure" required><br></span></p>
+            <input type="range" min="1" max="30" value="15" [(ngModel)]='tenure' name="tenure" class="slider" required>
+            <p>Rate Of Interest( % )<span style="float: right; box-sizing: border-box;"><input type="text" value="8.5"
+                        [(ngModel)]='roi' name="roi" required><br></span></p>
+            <input type="range" min="5" max="24" step="0.5" value="5" [(ngModel)]='roi' name="roi" class="slider" required>
+            <p><button id="calculate" [disabled]="!(loanamount)">Calculate</button><br></p>
             <p *ngIf='flag1' style="text-align: justify;"> Your EMI for ₹{{loanamount}} for {{tenure}} years at {{roi}}%
                 is</p>
             <h2 *ngIf='flag1'>₹{{emi}}</h2>
-            <!-- <h1 *ngIf='flag1'> Pie Chart</h1>
-            <p *ngIf='flag1' class="piechart"></p> -->
+            
+        </div>
+        <div style="width: 50%;">
+            <img src="/assets/Chart.jpg" *ngIf='flag1'>
+        </div>
+        <div style="width: 50%; float: right;">
+            <fusioncharts type='pie2d' width='800' height='600' [dataSource]='dataSource'
+                (dataplotClick)='dataplotClick($event)' (initialized)='initialized($event)' *ngIf='flag1' class="chart">
+            </fusioncharts>
         </div>
     </form>
+    
 </div>
 <div *ngIf='!flag'>
-    <h2 style="margin-left: 50px;margin-right: 50px;text-shadow: black 2px 2px 10px;">Home Loan Eligibility Calculator</h2>
+    <h2 style="margin-left: 50px;margin-right: 50px;text-shadow: black 2px 2px 10px;">Home Loan Eligibility Calculator
+    </h2>
     <p style="margin-left: 50px;margin-right: 50px; line-height: 25px; text-align: justify;">
-        Your dream home is now within your reach with Bank Of LTI Bank Home Loans. We offer higher loan amount on your income. 
-        Your home loan eligibility can be further enhanced by including income of the co-applicant(s) of your Home Loan.<br>
-        Home Loan eligibility is calculated after considering various factors including monthly income, fixed monthly obligation, 
-        current age, retirement age etc. Your home loan eligibility can also be considered an indicator of your 
-        home loan affordability.  <br>
+        Your dream home is now within your reach with Bank Of LTI Bank Home Loans. We offer higher loan amount on your
+        income.
+        Your home loan eligibility can be further enhanced by including income of the co-applicant(s) of your Home
+        Loan.<br>
+        Home Loan eligibility is calculated after considering various factors including monthly income, fixed monthly
+        obligation,
+        current age, retirement age etc. Your home loan eligibility can also be considered an indicator of your
+        home loan affordability. <br>
         Use Bank Of LTI Home Loan Eligibility Calculator to calculate the amount that you can borrow.</p>
     <h2 class="header">
         Eligibility Calculator
     </h2>
     <form #eligForm='ngForm' (ngSubmit)='calculateEligibility(eligForm)' style="border-top:solid black 1px;">
-        <div class="container">
-            <!-- <label for="fname">Loan Amount: </label><br> -->
-            <p>Monthly Income <span style="float: right;">{{monthlyincome}}</span></p>
-            <!-- <input type="text" [(ngModel)]='monthlyincome' name="monthlyincome"> -->
+        <div class="container" style="line-height: 30px;">
+            <p>Monthly Income ( ₹ ) <span style="float: right;"><input type="text" [(ngModel)]='monthlyincome'
+                        name="monthlyincome"></span></p>
             <input type="range" min="10000" max="15000000" value="50000" [(ngModel)]='monthlyincome'
                 name="monthlyincome" class="slider">
             <br>
             <p><button id="calculate">Calculate</button><br></p>
-            <!-- <label for="fname">EMI:</label><br> -->
             <p *ngIf='flag2'>With ₹{{monthlyincome}} p.m. you are eligible for a loan of</p>
             <h2 *ngIf='flag2'>₹{{eligibility}}</h2>
         </div>

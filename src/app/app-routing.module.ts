@@ -5,8 +5,7 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { FaqPageComponent } from './faq-page/faq-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
-import { Aboutus1Component } from './aboutus1/aboutus1.component';
-
+import { BankInfoComponent } from './bank-info/bank-info.component';
 
 const routes: Routes = [
   {
@@ -20,14 +19,15 @@ const routes: Routes = [
   },
   {
     path:'FaqLink',component:FaqPageComponent
-  },{
+  },
+  {
     path:'loginLink',component:LoginPageComponent
   },
   {
     path:'adminLink',component:AdminLoginComponent
   },
   {
-    path:'aboutus1',component:Aboutus1Component
+    path:'infoLink',component:BankInfoComponent
   }
 
 ];
