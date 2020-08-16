@@ -17,6 +17,10 @@ import { FaqPageComponent } from "./faq-page/faq-page.component";
 import { BankInfoComponent } from './bank-info/bank-info.component';
 
 
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,

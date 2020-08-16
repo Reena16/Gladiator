@@ -18,10 +18,10 @@ section{
     background-color: white;
 }
 .accordion-item{
-    background-color: ghostwhite;
-    margin-bottom:1rem;
-    padding: 0rem;
-    box-shadow: .5rem 2px .5rem ghostwhite;
+    background-color: white;
+    margin-bottom:2rem;
+    padding: 2rem 5rem;
+    box-shadow: .5rem 2px .5rem white;
 }
 .column{
 float:left;
