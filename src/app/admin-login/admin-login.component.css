@@ -1,6 +1,6 @@
 input {
     position: relative;
-    width: 80%;
+    width: 100%;
     padding: 12px 20px;
     
    
@@ -11,15 +11,13 @@ input {
     margin : 0 auto;
   }
   .main{
-    height:520px ;
+    height:570px ;
     
-    background-image: url("/assets/AdminLogin.jpg");
+    
   }
-  .form{
-    top:70%;
-  }
+ 
 .admin{
-  
+    padding-top: 100px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     width: 300px;
     height: 360px;
@@ -31,12 +29,12 @@ input {
     background-color:#ac3831;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 15px 50px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 15px;
-    border-radius: 20px;
+    
     margin: 0;
     position: relative;
     width:80%;
