@@ -20,6 +20,7 @@ import * as Charts from 'fusioncharts/fusioncharts.charts';
 import * as FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
 import { BankInfoComponent } from './bank-info/bank-info.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
  FusionChartsModule.fcRoot(
    FusionCharts,
@@ -37,6 +38,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     FaqPageComponent,
     BankInfoComponent,
     ForgotPasswordComponent,
+    ResetPasswordComponent,
   
   ],
   imports: [

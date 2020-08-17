@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-forgot-password',
   templateUrl: './forgot-password.component.html',
@@ -10,13 +10,14 @@ export class ForgotPasswordComponent implements OnInit {
   public form={
     email:null
   };
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
 
   onSubmit(){
-    var email=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    
+    //code for email validation then route to reset page else
+    //throws error msg.
+    this.router.navigate(['/resetPasswordLink']);
   }
 }
