@@ -6,7 +6,8 @@ import { FaqPageComponent } from './faq-page/faq-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { BankInfoComponent } from './bank-info/bank-info.component';
-
+import { ForgotPasswordComponent } from "./forgot-password/forgot-password.component";
+import { ResetPasswordComponent } from "./reset-password/reset-password.component";
 const routes: Routes = [
   {
     path:'',component:HomePageComponent
@@ -28,6 +29,10 @@ const routes: Routes = [
   },
   {
     path:'infoLink',component:BankInfoComponent
+  },{
+    path:'forgotPasswordLink',component:ForgotPasswordComponent
+  },{
+    path:'resetPasswordLink',component:ResetPasswordComponent
   }
 
 ];
