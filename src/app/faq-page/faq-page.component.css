@@ -19,18 +19,22 @@ section{
 }
 .accordion-item{
     background-color: white;
-    margin-bottom:2rem;
-    padding: 2rem 5rem;
+    margin-bottom:3rem;
+    padding: 2rem 6rem;
     box-shadow: .5rem 2px .5rem white;
 }
 .column{
-float:left;
-width:50%
+  margin: 20px;
+  padding: 10px,300px;
+  float:right;
+  width:50%
 }
 .row{
-content:" ";
-display:table;
-clear:both;
+  margin: 10px;
+  padding: 10px,20px;
+  content:" ";
+  display:table;
+  clear:both;
 }
 .question-link{
     font-size: 1rem;
@@ -61,7 +65,7 @@ dl.faq button {
     padding: 0.5em;
     font-size: 100%;
     display: none;
-    background-color: rgba(51, 182, 187, 0.253);
+    background-color: ghostWhite;
   }
   
   dl.faq button:hover,
@@ -82,11 +86,11 @@ dl.faq button {
   }
   
  dl.faq button[aria-expanded="false"]::before {
-    /*content: url('../images/right-arrow-brown.png');*/
+   /* content: url("../../assets/right-arrow-brown.png");*/
     padding-right: 0.35em;
   }
   
   dl.faq button[aria-expanded="true"]::before{
-    /*content: url('../images/down-arrow-brown.png');*/
+ /*   content: url('../images/down-arrow-brown.png');*/
     padding-right: 0.35em;
   }
