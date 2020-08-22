@@ -23,6 +23,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 import { RegisterComponent } from './register/register.component';
+import { TestComponent } from './test/test.component';
 
  FusionChartsModule.fcRoot(
    FusionCharts,
@@ -43,6 +44,8 @@ import { RegisterComponent } from './register/register.component';
     ResetPasswordComponent,
    
     RegisterComponent,
+   
+    TestComponent,
   
   ],
   imports: [

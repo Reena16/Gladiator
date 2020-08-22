@@ -8,8 +8,8 @@ import { Customer } from "../models/customer";
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-
-  customer:Customer;
+  confirmPass="";
+  customer:Customer = new Customer();
   constructor(private router: Router) { }
   pass : boolean = false;
   ngOnInit(): void {
@@ -23,8 +23,34 @@ export class RegisterComponent implements OnInit {
       event.preventDefault();
     }
   }
-  register(){
-    
+    confirmPassword():boolean {
+      if (this.customer.customerPassword == this.confirmPass){
+        return true;      
+      }
+      return false;
+    }
+  
+    manageMobile() {
+      var data = this.customer.customerMobileNumber;
+      data = data.replace(/ /g, "");
+      if (data.length <= 5)
+      this.customer.customerMobileNumber = data;
+      else
+      this.customer.customerMobileNumber = data.substring(0, 5) + " " + data.substring(5, data.length);
+    }
 
+
+    isNumber(event, id, l) {
+      var mobile = (<HTMLInputElement>document.getElementById(id));
+      var data = mobile.value;
+      var key = event.key;
+      if (isNaN(key) || data.length > l)
+        event.preventDefault();
+    }
+  register(){
+      
+    this.router.navigate(['/loginLink']);
+    // alert(this.customer);
+    console.log(this.customer);
   }
 }
