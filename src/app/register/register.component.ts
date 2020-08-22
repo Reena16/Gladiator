@@ -16,7 +16,7 @@ export class RegisterComponent implements OnInit {
   }
   
   register(){
-    // alert(this.customer);
+    alert(JSON.stringify(this.customer));
     console.log(this.customer);
   }
 }
