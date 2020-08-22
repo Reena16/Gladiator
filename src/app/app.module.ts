@@ -10,6 +10,7 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { enableProdMode } from '@angular/core'
 import { FusionChartsModule } from 'angular-fusioncharts';
 import { FaqPageComponent } from "./faq-page/faq-page.component";
+import { HttpClientModule } from '@angular/common/http';
 
 
 // Load FusionCharts
@@ -52,7 +53,8 @@ import { TestComponent } from './test/test.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    FusionChartsModule
+    FusionChartsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

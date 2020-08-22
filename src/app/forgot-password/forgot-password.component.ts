@@ -7,15 +7,13 @@ import { Router } from '@angular/router';
 })
 export class ForgotPasswordComponent implements OnInit {
 
-  public form={
-    email:null
-  };
+  
   constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
 
-  onSubmit(){
+  forgotPass(){
     //code for email validation then route to reset page else
     //throws error msg.
     this.router.navigate(['/resetPasswordLink']);
