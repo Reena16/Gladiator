@@ -8,6 +8,9 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { BankInfoComponent } from './bank-info/bank-info.component';
 import { ForgotPasswordComponent } from "./forgot-password/forgot-password.component";
 import { ResetPasswordComponent } from "./reset-password/reset-password.component";
+
+import { RegisterComponent } from "./register/register.component";
+
 const routes: Routes = [
   {
     path:'',component:HomePageComponent
@@ -31,9 +34,14 @@ const routes: Routes = [
     path:'infoLink',component:BankInfoComponent
   },{
     path:'forgotPasswordLink',component:ForgotPasswordComponent
-  },{
+  },
+  {
     path:'resetPasswordLink',component:ResetPasswordComponent
+  },
+  {
+    path:'registerLink',component:RegisterComponent
   }
+
 
 ];
 

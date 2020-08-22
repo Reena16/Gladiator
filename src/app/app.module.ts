@@ -22,6 +22,8 @@ import { BankInfoComponent } from './bank-info/bank-info.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
+import { RegisterComponent } from './register/register.component';
+
  FusionChartsModule.fcRoot(
    FusionCharts,
    Charts,
@@ -39,6 +41,8 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
     BankInfoComponent,
     ForgotPasswordComponent,
     ResetPasswordComponent,
+   
+    RegisterComponent,
   
   ],
   imports: [

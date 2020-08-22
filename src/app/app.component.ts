@@ -19,4 +19,7 @@ export class AppComponent {
   getRegister(){
     this.router.navigate(['/registerLink']);
   }
+  getCalculator(){
+    this.router.navigate(['/calculatorLink']);
+  }
 }
