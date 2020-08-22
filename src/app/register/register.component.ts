@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { Customer } from "../models/customer";
+import { RegisterServiceService } from '../register-service.service';
 
 @Component({
   selector: 'app-register',
@@ -10,7 +11,8 @@ import { Customer } from "../models/customer";
 export class RegisterComponent implements OnInit {
   confirmPass="";
   customer:Customer = new Customer();
-  constructor(private router: Router) { }
+  data:any;
+  constructor(private router: Router,private service:RegisterServiceService) { }
   pass : boolean = false;
   ngOnInit(): void {
   }
@@ -48,9 +50,13 @@ export class RegisterComponent implements OnInit {
         event.preventDefault();
     }
   register(){
-      
+    alert(JSON.stringify(this.customer));
+    this.service.register(this.customer).subscribe(data=>{
+      this.data=data;
+      console.log(data);
+    })
     this.router.navigate(['/loginLink']);
     // alert(this.customer);
-    console.log(this.customer);
+    // console.log(this.customer);
   }
 }
