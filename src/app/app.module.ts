@@ -21,9 +21,10 @@ import * as FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
 import { BankInfoComponent } from './bank-info/bank-info.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
-
+import {  HttpClientModule} from "@angular/common/http";
 import { RegisterComponent } from './register/register.component';
 import { TestComponent } from './test/test.component';
+import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
 
  FusionChartsModule.fcRoot(
    FusionCharts,
@@ -42,17 +43,19 @@ import { TestComponent } from './test/test.component';
     BankInfoComponent,
     ForgotPasswordComponent,
     ResetPasswordComponent,
-   
+  
     RegisterComponent,
    
     TestComponent,
+   
+    DashboardAdminComponent
   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    FusionChartsModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

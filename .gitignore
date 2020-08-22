@@ -45,3 +45,7 @@ testem.log
 .DS_Store
 Thumbs.db
 src/assets/Idea.gif
+src/services/admin-login.service.ts
+src/model/CustomerLogin.ts
+src/model/ForgotPassword.ts
+src/services/admin-login.service.ts

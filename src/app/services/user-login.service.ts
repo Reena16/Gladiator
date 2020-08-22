@@ -1,16 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Observable } from 'rxjs';
-import { AdminLogin } from "../model/AdminLogin";
+import { CustomerLogin } from "../models/CustomerLogin";
 @Injectable({
   providedIn: 'root'
 })
-export class AdminLoginService {
+export class UserLoginService {
 
   constructor(private http:HttpClient) { }
 
-  loginAdmin(login:AdminLogin):Observable<any>{
-    let url="http://localhost:8888/adminLogin";
+  
+  loginUser(login:CustomerLogin):Observable<any>{
+    let url="http://localhost:8888/customerLogin";
     return this.http.post(url,login);
   }
 }
