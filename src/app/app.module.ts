@@ -10,6 +10,7 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { enableProdMode } from '@angular/core'
 import { FusionChartsModule } from 'angular-fusioncharts';
 import { FaqPageComponent } from "./faq-page/faq-page.component";
+import { HttpClientModule } from '@angular/common/http';
 
 
 // Load FusionCharts
@@ -21,7 +22,6 @@ import * as FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
 import { BankInfoComponent } from './bank-info/bank-info.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
-import {  HttpClientModule} from "@angular/common/http";
 import { RegisterComponent } from './register/register.component';
 import { TestComponent } from './test/test.component';
 import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
@@ -55,6 +55,7 @@ import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.compo
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    FusionChartsModule,
     HttpClientModule
   ],
   providers: [],
