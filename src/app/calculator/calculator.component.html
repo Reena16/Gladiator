@@ -48,13 +48,15 @@
             <h2 *ngIf='flag1'>₹{{emi}}</h2>
             
         </div>
-        <div style="width: 50%;">
-            <img src="/assets/Chart.jpg" *ngIf='flag1'>
-        </div>
-        <div style="width: 50%; float: right;">
-            <fusioncharts type='pie2d' width='800' height='600' [dataSource]='dataSource'
-                (dataplotClick)='dataplotClick($event)' (initialized)='initialized($event)' *ngIf='flag1' class="chart">
-            </fusioncharts>
+        <div style="position: relative;">
+            <div style="width: 44%; float: left;">
+                <img src="/assets/Chart.jpg" *ngIf='flag1'>
+            </div>
+            <div style="float: right; width: 56%;" >
+                <fusioncharts type='pie2d' width='850' height='590' [dataSource]='dataSource'
+                    (dataplotClick)='dataplotClick($event)' (initialized)='initialized($event)' *ngIf='flag1' class="chart">
+                </fusioncharts>
+            </div>
         </div>
     </form>
     
