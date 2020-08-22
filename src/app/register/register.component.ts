@@ -9,14 +9,14 @@ import { Customer } from "../models/customer";
 })
 export class RegisterComponent implements OnInit {
 
-  customer:Customer;
+  customer:Customer = new Customer();
   constructor(private router: Router) { }
   pass : boolean = false;
   ngOnInit(): void {
   }
   
   register(){
-    
-
+    // alert(this.customer);
+    console.log(this.customer);
   }
 }

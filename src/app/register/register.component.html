@@ -6,7 +6,7 @@ Registration Form</h1>
 </div>
 <div class="main">
 
-    <form>
+    <form (ngSubmit)="register()" ngNativeValidate>
         <div id="name">
             <h2 class="name">
 Name </h2>
@@ -17,7 +17,7 @@ Name </h2>
         </div>
 <h2 class="name">
 Email </h2>
-<input class="company" type="email" name="eml" placeholder="Enter email" [(ngModel)]=customer.customerEmail required>
+<input class="company" type="email" name="eml" placeholder="Enter email" [(ngModel)]=customer.customerEmail pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
 <h2 class="name">
 Date of Birth</h2>
 <input class="email" type="date" name="dob" [(ngModel)]=customer.customerdateOfBirth required>
@@ -25,7 +25,7 @@ Date of Birth</h2>
 Contact</h2>
 <input class="Code" type="text" name="area_code" placeholder="Enter city"[(ngModel)]=customer.customerCity required >
         <label class="area-code"> City</label>
-        <input class="number" type="tel" name="phone" placeholder="xxx-xxx-xxxx" minlength="10" [(ngModel)]=customer.customerMobileNumber required>
+        <input class="number" type="tel" name="phone" placeholder="xxx-xxx-xxxx" minlength="10" maxlength="10" [(ngModel)]=customer.customerMobileNumber required>
         <label class="phone-number">Contact Number</label>
         
 
@@ -40,7 +40,7 @@ Employment Type</h2>
         </select>
         <h2 class="name">
             Password </h2>
-            <input class="company" type="password" name="psw" placeholder="Enter password" [(ngModel)]=customer.customerPassword required>
+            <input class="company" type="password" name="psw" placeholder="Enter password" [(ngModel)]=customer.customerPassword pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  required>
                
         <h2 class="name">
             Confirm password </h2>
