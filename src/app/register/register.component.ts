@@ -14,7 +14,15 @@ export class RegisterComponent implements OnInit {
   pass : boolean = false;
   ngOnInit(): void {
   }
-  
+  isAName(event) {
+    var key = event.key;
+    if ((key >= 'a' && key <= 'z') || (key >= 'A' && key <= 'Z') || key == ' ') {
+
+    }
+    else {
+      event.preventDefault();
+    }
+  }
   register(){
     
 
