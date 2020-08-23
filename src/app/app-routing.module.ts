@@ -8,8 +8,8 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { BankInfoComponent } from './bank-info/bank-info.component';
 import { ForgotPasswordComponent } from "./forgot-password/forgot-password.component";
 import { ResetPasswordComponent } from "./reset-password/reset-password.component";
-
 import { RegisterComponent } from "./register/register.component";
+import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
 
 const routes: Routes = [
   {
@@ -40,8 +40,10 @@ const routes: Routes = [
   },
   {
     path:'registerLink',component:RegisterComponent
+  },
+  {
+  path:'dashboardAdmin',component:DashboardAdminComponent
   }
-
 
 ];
 
