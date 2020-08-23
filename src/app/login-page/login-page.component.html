@@ -4,7 +4,7 @@
 <div class="centered">Let's together make your <div></div>dream a reality....</div>
 </div>
 
-<form >
+<form (ngSubmit) ='loginUser()'>
 
 <div class ="loginBox" >
     <h2 style= "font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" class="header">
@@ -12,11 +12,11 @@
     </h2>
     <div class = "login">
     
-    <input type="text" name='nm' placeholder="Enter UserID" >
+    <input type="text" name='nm' id ='userid'placeholder="Enter UserID" [(ngModel)] = login.customerId (keypress)='isNumber($event,"userid",10)' >
 </div>  
 <div class = "login">
     
-    <input type="password" name='psw' placeholder="Enter Password" >
+    <input type="password" name='psw' placeholder="Enter Password" [(ngModel)] = login.customerPassword>
 </div>
 <br>
 <div>
@@ -28,9 +28,14 @@
     <span><a routerLink= "/registerLink">  New User ?</a></span>
 
 </div>
+<h4 style="color: red;">{{message}}</h4>
+
 </div>
+
+
 </form>
 
 </div>
+
 
 
