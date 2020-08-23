@@ -18,6 +18,13 @@ message:any;
   ngOnInit(): void {
   }
 
+isNumber(event, id, l) {
+    var mobile = (<HTMLInputElement>document.getElementById(id));
+    var data = mobile.value;
+    var key = event.key;
+    if (isNaN(key) || data.length > l)
+      event.preventDefault();
+  }
   loginAdmin() {
     alert(JSON.stringify(this.login));
     this.service.loginAdmin(this.login).subscribe(data => {
