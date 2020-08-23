@@ -11,6 +11,7 @@ export class AdminLoginComponent implements OnInit {
 
   login: AdminLogin = new AdminLogin();
   data:any;
+message:any;
   status;
   constructor(private service: AdminLoginService, private router: Router) { }
 
@@ -21,14 +22,17 @@ export class AdminLoginComponent implements OnInit {
     alert(JSON.stringify(this.login));
     this.service.loginAdmin(this.login).subscribe(data => {
       this.status=data;
+alert(JSON.stringify(data))
         if(data.status=="SUCCESS"){
           let customerId= data.customerId;
           let customerName=data.name;
+          this.message=data.message;
+          this.router.navigate(['/dashboardAdmin']);
           sessionStorage.setItem("customerId",customerId);
           sessionStorage.setitem("customerName",customerName);
-      console.log(data);
-      this.router.navigate(['/dashboardAdmin']);
-    }
+    
+    }else{
+this.message=data.message;}
     })
 }
 }
