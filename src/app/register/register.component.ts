@@ -12,7 +12,8 @@ export class RegisterComponent implements OnInit {
   confirmPass="";
   customer:Customer = new Customer();
   data:any;
-  constructor(private router: Router,private service:RegisterServiceService) { }
+  constructor(private router: Router,private service:RegisterServiceService) { 
+  }
   pass : boolean = false;
   ngOnInit(): void {
   }
