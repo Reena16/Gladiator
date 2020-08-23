@@ -29,7 +29,7 @@ alert(JSON.stringify(data))
           this.message=data.message;
           this.router.navigate(['/dashboardAdmin']);
           sessionStorage.setItem("customerId",customerId);
-          sessionStorage.setitem("customerName",customerName);
+          sessionStorage.setItem("customerName",customerName);
     
     }else{
 this.message=data.message;}
