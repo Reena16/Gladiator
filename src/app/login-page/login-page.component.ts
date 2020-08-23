@@ -39,7 +39,7 @@ constructor(private router : Router,private service : LoginserviceService ){}
           this.message = data.message;
           sessionStorage.setItem('customerId',customerId);
           sessionStorage.setItem('customerFirstName',customerName);
-          //this.router.navigate(['dashboard']);
+          this.router.navigate(['customerDashboard']);
           
         }
 
