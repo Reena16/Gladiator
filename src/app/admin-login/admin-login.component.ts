@@ -19,7 +19,9 @@ export class AdminLoginComponent implements OnInit {
   loginAdmin() {
     alert(JSON.stringify(this.login));
     this.service.loginAdmin(this.login).subscribe(data => {
-      this.status = data;
+      this.data=data;
+      console.log(data);
     });
+    this.router.navigate(['/dashboardAdmin']);
   }
 }

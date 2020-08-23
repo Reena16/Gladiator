@@ -10,7 +10,7 @@ export class AdminLoginService {
   constructor(private http:HttpClient) { }
 
   loginAdmin(login:AdminLogin):Observable<any>{
-    let url="http://localhost:8888/adminLogin";
+    let url="http://localhost:8886/adminLogin";
     return this.http.post(url,login);
   }
 }
