@@ -11,25 +11,36 @@ export class AdminLoginComponent implements OnInit {
 
   login: AdminLogin = new AdminLogin();
   data:any;
+message:any;
   status;
   constructor(private service: AdminLoginService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
+isNumber(event, id, l) {
+    var mobile = (<HTMLInputElement>document.getElementById(id));
+    var data = mobile.value;
+    var key = event.key;
+    if (isNaN(key) || data.length > l)
+      event.preventDefault();
+  }
   loginAdmin() {
     alert(JSON.stringify(this.login));
     this.service.loginAdmin(this.login).subscribe(data => {
       alert(JSON.stringify(data));
       this.status=data;
+alert(JSON.stringify(data))
         if(data.status=="SUCCESS"){
           let customerId= data.customerId;
           let customerName=data.name;
+          this.message=data.message;
+          this.router.navigate(['/dashboardAdmin']);
           sessionStorage.setItem("customerId",customerId);
           sessionStorage.setItem("customerName",customerName);
-      console.log(data);
-      this.router.navigate(['/dashboardAdmin']);
-    }
+          this.router.navigate(['/dashboardAdmin']);
+    }else{
+this.message=data.message;}
     })
 }
 }
