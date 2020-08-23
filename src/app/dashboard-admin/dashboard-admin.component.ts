@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard-admin.component.css']
 })
 export class DashboardAdminComponent implements OnInit {
-
-  constructor() { }
+  name:any;
+  constructor() { 
+    this.name=sessionStorage.getItem("adminName");
+  }
 
   ngOnInit(): void {
   }
