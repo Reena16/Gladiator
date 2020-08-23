@@ -12,6 +12,7 @@ import { RegisterComponent } from "./register/register.component";
 import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
 import { ViewAllUsersComponent } from './view-all-users/view-all-users.component';
 import { UpdateDetailsComponent } from './update-details/update-details.component';
+import { LoanApplicationComponent} from './loan-application/loan-application.component';
 
 const routes: Routes = [
   {
@@ -50,7 +51,11 @@ const routes: Routes = [
   },
   {
     path:'updateDetails',component:UpdateDetailsComponent
+  },
+  {
+    path:'loanapplicationlink',component:LoanApplicationComponent
   }
+
 
 ];
 
