@@ -10,7 +10,7 @@
 </div>
 <div class="content" >
     <form (ngSubmit)="update()" class="form" style="align-content: center;">
-        <table style="align-content: center;padding: 20px;  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+        <table style="align-content: center;padding: 8px;  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
             <tr>
                 <td><h3>Admin Id :</h3></td>
                 <td ><input type="text" class="len" placeholder="Enter Admin Id"  (keypress)='isNumber($event,"uid",10)'[(ngModel)]='updateAdmin.adminId'></td>
