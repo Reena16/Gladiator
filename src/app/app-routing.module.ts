@@ -10,6 +10,8 @@ import { ForgotPasswordComponent } from "./forgot-password/forgot-password.compo
 import { ResetPasswordComponent } from "./reset-password/reset-password.component";
 import { RegisterComponent } from "./register/register.component";
 import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
+import { ViewAllUsersComponent } from './view-all-users/view-all-users.component';
+import { UpdateDetailsComponent } from './update-details/update-details.component';
 
 const routes: Routes = [
   {
@@ -43,6 +45,11 @@ const routes: Routes = [
   },
   {
   path:'dashboardAdmin',component:DashboardAdminComponent
+  },{
+     path:'viewAllUser',component:ViewAllUsersComponent
+  },
+  {
+    path:'updateDetails',component:UpdateDetailsComponent
   }
 
 ];

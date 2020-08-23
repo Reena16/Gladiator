@@ -25,6 +25,8 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 import { RegisterComponent } from './register/register.component';
 import { TestComponent } from './test/test.component';
 import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
+import { ViewAllUsersComponent } from './view-all-users/view-all-users.component';
+import { UpdateDetailsComponent } from './update-details/update-details.component';
 
  FusionChartsModule.fcRoot(
    FusionCharts,
@@ -48,7 +50,11 @@ import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.compo
    
     TestComponent,
    
-    DashboardAdminComponent
+    DashboardAdminComponent,
+
+    ViewAllUsersComponent,
+   
+    UpdateDetailsComponent
   
   ],
   imports: [

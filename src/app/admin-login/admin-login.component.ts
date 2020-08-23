@@ -10,15 +10,15 @@ import { Router } from '@angular/router';
 export class AdminLoginComponent implements OnInit {
 
   login: AdminLogin = new AdminLogin();
-  data:any;
-message:any;
+  data: any;
+  message: any;
   status;
   constructor(private service: AdminLoginService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
-isNumber(event, id, l) {
+  isNumber(event, id, l) {
     var mobile = (<HTMLInputElement>document.getElementById(id));
     var data = mobile.value;
     var key = event.key;
@@ -29,16 +29,17 @@ isNumber(event, id, l) {
     alert(JSON.stringify(this.login));
     this.service.loginAdmin(this.login).subscribe(data => {
       alert(JSON.stringify(data));
-      this.status=data;
-        if(data.status=="SUCCESS"){
-          let adminId= data.adminId;
-          let adminName=data.adminName;
-          this.message=data.message;
-          sessionStorage.setItem("adminId",adminId);
-          sessionStorage.setItem("adminName",adminName);
-          this.router.navigate(['/dashboardAdmin']);
-    }else{
-this.message=data.message;}
+      this.status = data;
+      if (data.status == "SUCCESS") {
+        let adminId = data.adminId;
+        let adminName = data.adminName;
+        this.message = data.message;
+        sessionStorage.setItem("adminId", adminId);
+        sessionStorage.setItem("adminName", adminName);
+        this.router.navigate(['/dashboardAdmin']);
+      } else {
+        this.message = data.message;
+      }
     })
-}
+  }
 }
