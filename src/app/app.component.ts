@@ -22,4 +22,8 @@ export class AppComponent {
   getCalculator(){
     this.router.navigate(['/calculatorLink']);
   }
+
+  // logOut(){
+  //   sessionStorage.clear;
+  // }
 }

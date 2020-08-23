@@ -28,16 +28,15 @@ isNumber(event, id, l) {
   loginAdmin() {
     alert(JSON.stringify(this.login));
     this.service.loginAdmin(this.login).subscribe(data => {
+      alert(JSON.stringify(data));
       this.status=data;
-alert(JSON.stringify(data))
         if(data.status=="SUCCESS"){
-          let customerId= data.customerId;
-          let customerName=data.name;
+          let adminId= data.adminId;
+          let adminName=data.adminName;
           this.message=data.message;
+          sessionStorage.setItem("adminId",adminId);
+          sessionStorage.setItem("adminName",adminName);
           this.router.navigate(['/dashboardAdmin']);
-          sessionStorage.setItem("customerId",customerId);
-          sessionStorage.setItem("customerName",customerName);
-    
     }else{
 this.message=data.message;}
     })
