@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Customer } from '../models/customer';
+import { UpdateUserService } from "../update-user.service";
 
 @Component({
   selector: 'app-update-profile',
@@ -7,13 +8,45 @@ import { Customer } from '../models/customer';
   styleUrls: ['./update-profile.component.css']
 })
 export class UpdateProfileComponent implements OnInit {
+  confirmPass ="";
 
   customerName:string;
+  customerSurname:string;
+  id:number;
+  emptype:string;
+  email : string;
+  dob : Date;
+  city:string;
+  contact:string;
+  pass :string;
   customer= new Customer();
-  constructor() { }
+
+  constructor(private service:UpdateUserService) {
+    this.id = parseInt(sessionStorage.customerId);
+    this.service.findById(this.id).subscribe(data=>{
+      console.log(data.customerId);
+      this.customer = data;
+      this.customerName = data.customerFirstName;
+      this.customerSurname = data.customerLastName;
+    //this.id = data.customerId;
+      this.id = sessionStorage.customerId;
+      this.email = data.customerEmail;
+      this.dob = data.customerdateOfBirth;
+      this.emptype = data.customerEmploymentType;
+      this.city = data.customerCity;
+      this.contact=data.customerMobileNumber;
+      this.pass = data.customerPassword;
+
+      //alert("Information updated successfully");
+    })
+  }
+
 
   ngOnInit(): void {
-    this.customerName = sessionStorage.getItem("customerFirstName");
+    // this.customerName = sessionStorage.getItem("customerFirstName");
+    // this.customerSurname = sessionStorage.getItem("customerLastname");
+    // this.id = sessionStorage.getItem('customerId');
+    // this.email= sessionStorage.getItem('customerEmail');
   }
   isAName(event) {
     var key = event.key;
@@ -23,6 +56,12 @@ export class UpdateProfileComponent implements OnInit {
     else {
       event.preventDefault();
     }
+  }
+  confirmPassword(): boolean {
+    if (this.pass == this.confirmPass){
+      return true;      
+    }
+    return false;
   }
     
   
@@ -43,7 +82,14 @@ export class UpdateProfileComponent implements OnInit {
       if (isNaN(key) || data.length > l)
         event.preventDefault();
     }
+
+
+  
   update(){
+    this.service.update(this.customer).subscribe(data=>{
+
+      alert(JSON.stringify(data));
+    })
 
   }
 
