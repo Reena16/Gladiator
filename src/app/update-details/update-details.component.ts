@@ -9,19 +9,33 @@ import { UpdateAdminDetailsService } from "../services/update-admin-details.serv
 })
 export class UpdateDetailsComponent implements OnInit {
 
-  adId:string;
+  id:number;
+  adminFirstName:string;
+  adminLastName:string;
+  email : string;
+  dob : Date;
+  gender:string;
+  contact:string;
+  pass :string;
   updateAdmin: AdminUpdate = new AdminUpdate();
-  data:any;
-  date:Date;
-  constructor(private router: Router,private service:UpdateAdminDetailsService) { }
-
+  
+  constructor(private service:UpdateAdminDetailsService) {
+    this.id = parseInt(sessionStorage.adminId);
+    this.service.findById(this.id).subscribe(data=>{
+      console.log(data.adminId);
+      this.updateAdmin = data;
+      this.adminFirstName = data.adminFirstName;
+      this.adminLastName = data.adminLastName
+      this.id = sessionStorage.adminId;
+      this.email = data.adminEmail;
+      this.dob = data.dateOfBirth;
+      this.gender = data.adminGender;
+      this.contact=data.adminContact;
+      this.pass = data.adminPassword;
+   //console.log(this.updateAdmin) 
+  })
+  }
   ngOnInit(): void {
-    this.adId=sessionStorage.getItem("adminId");
-    this.service.update(this.updateAdmin).subscribe(data=>{
-      this.updateAdmin=data;
-      console.log(this.updateAdmin);
-    })
-    this.router.navigate(['/updateDetails']);
   }
 
   isAName(event) {

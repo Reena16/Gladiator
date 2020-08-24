@@ -8,49 +8,39 @@
     <a href="#">Update Loan Status</a>
     <a href="#">Download Documents</a>
 </div>
-<div class="content" >
-    <form ngNativeValidate>
+<div class="content">
+<br/>
+    <form ngNativeValidate class="form">
+        <br />
+        <h2 class="name"> Admin ID</h2>
+        <input class="adminid" type="text" name="adminid" [(ngModel)]=updateAdmin.adminId value={{id}} readonly><br>
+        <div id="name">
+            <h2 class="name">
+                Name </h2>
+            <input class="firstname" type="text" name="first_name" placeholder="Enter first name"
+                [(ngModel)]=updateAdmin.adminFirstName value={{adminFirstName}} readonly>
+            <input class="lastname" type="text" name="last_name" placeholder="Enter last name"
+                [(ngModel)]=updateAdmin.adminLastName value={{adminLastName}} readonly>
+        </div>
+        <h2 class="name">
+            Email </h2>
+        <input class="company" type="email" name="eml" placeholder="Enter email" [(ngModel)]=updateAdmin.adminEmail
+            value={{email}} readonly><br>
+        <h2 class="name">
+            Date of Birth</h2>
+        <input class="dob" type="date" name="dob" [(ngModel)]=updateAdmin.dateOfBirth value={{dob}} readonly><br>
+        <h2 class="name">
+            Gender</h2>
+        <input class="company1" type="text" name="gender" placeholder="Male" [(ngModel)]=updateAdmin.adminGender
+            value={{gender}} readonly><br>
+        <h2 class="name">
+            Contact</h2>
+        <input class="number" type="tel" name="phone" id="phone" placeholder="xxx-xxx-xxxx"
+            (keypress)='isNumber($event,"phone",10)' minlength="10" maxlength="10"
+            [(ngModel)]="updateAdmin.adminContact" value={{contact}} readonly>
+        <br>
 
-        <table class="tab" >
-            <tr>
-                <td><h3>Admin Id :</h3></td>
-                <td ><input type="text" class="len"   value={{adId}}
-                    readonly></td>
-            </tr>
-            <tr>
-                <td><h3>First Name :</h3></td>
-                <td ><input type="text" class="len" name="first_name"  value={{updateAdmin.adminFirstName}} readonly>
-                </td>
-            </tr>
-            <tr>
-                <td><h3>Last Name :</h3></td>
-                <td ><input type="text"  class="len" name="last_name"  value={{updateAdmin.adminLastName}} readonly>
-                </td>
-            </tr>
-            <tr>
-                <td><h3>Email :</h3></td>
-                <td ><input type="email" class="len" name="eml" value={{updateAdmin.adminEmail}}  readonly>
-                </td>
-            </tr>
-            <tr>
-                <td><h3>Contact :</h3></td>
-                <td ><input type="tel" name="contact" class="len" placeholder="Enter Contact number" value={{updateAdmin.adminContact}}
-                         (keypress)='isNumber($event,"phone",10)' minlength="10"
-                        maxlength="10" readonly>
-                </td>
-            </tr>
-            <tr>
-                <td><h3>Date Of Birth : </h3></td>
-                <td ><input type="date" class="len" name="dob" value={{updateAdmin.dateOfBirth}}>
-                </td>
-            </tr>
-            <tr>
-                <td><h3>Gender : </h3></td>
-                <td ><input type="text" class="len" name="gender" value={{updateAdmin.adminGender}}  readonly>
-                </td>
-            </tr>
-        </table>
-        
+
+        <br>
     </form>
-
 </div>
