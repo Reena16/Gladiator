@@ -11,7 +11,7 @@ import { enableProdMode } from '@angular/core'
 import { FusionChartsModule } from 'angular-fusioncharts';
 import { FaqPageComponent } from "./faq-page/faq-page.component";
 import { HttpClientModule } from '@angular/common/http';
-
+import { AuthGuard } from './auth/auth.guard';
 
 // Load FusionCharts
 import * as FusionCharts from 'fusioncharts';
@@ -30,6 +30,7 @@ import { ViewAllUsersComponent } from './view-all-users/view-all-users.component
 import { UpdateDetailsComponent } from './update-details/update-details.component';
 import { LoanApplicationComponent } from './loan-application/loan-application.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
+import { ViewAllApplicationsComponent } from './view-all-applications/view-all-applications.component';
 
  FusionChartsModule.fcRoot(
    FusionCharts,
@@ -61,7 +62,8 @@ import { UpdateProfileComponent } from './update-profile/update-profile.componen
    
     CustomerDashboardComponent,
     LoanApplicationComponent,
-    UpdateProfileComponent
+    UpdateProfileComponent,
+    ViewAllApplicationsComponent
   
   ],
   imports: [
@@ -71,7 +73,7 @@ import { UpdateProfileComponent } from './update-profile/update-profile.componen
     FusionChartsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

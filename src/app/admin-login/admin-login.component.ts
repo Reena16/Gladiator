@@ -26,17 +26,19 @@ export class AdminLoginComponent implements OnInit {
       event.preventDefault();
   }
   loginAdmin() {
-   // alert(JSON.stringify(this.login));
     this.service.loginAdmin(this.login).subscribe(data => {
-     // alert(JSON.stringify(data));
+      alert(JSON.stringify(data));
       this.status = data;
       if (data.status == "SUCCESS") {
+        let flag = 'true';
         let adminId = data.adminId;
         let adminName = data.adminName;
         this.message = data.message;
         sessionStorage.setItem("adminId", adminId);
         sessionStorage.setItem("adminName", adminName);
+        localStorage.setItem('isLogedIn',flag);
         this.router.navigate(['/dashboardAdmin']);
+        
       } else {
         this.message = data.message;
       }

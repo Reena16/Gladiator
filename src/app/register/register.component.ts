@@ -17,6 +17,7 @@ export class RegisterComponent implements OnInit {
   }
   pass : boolean = false;
   ngOnInit(): void {
+    
   }
   isAName(event) {
     var key = event.key;
