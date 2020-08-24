@@ -36,10 +36,14 @@ constructor(private router : Router,private service : LoginserviceService ){}
           let flag = 'true';
           let customerId= data.customerId;
           let customerName=data.customerFirstName;
+          let customerSurname = data.customerLastName;
+          let customerMail = data.customerEmail;
           this.message = data.message;
           sessionStorage.setItem('customerId',customerId);
           sessionStorage.setItem('customerFirstName',customerName);
           sessionStorage.setItem('isLogedIn',flag);
+          sessionStorage.setItem('customerLastname',customerSurname);
+          sessionStorage.setItem('customerEmail',customerMail);
           this.router.navigate(['customerDashboard']);
           
         }

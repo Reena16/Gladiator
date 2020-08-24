@@ -12,6 +12,28 @@ export class LoanApplicationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  isAName(event) {
+    var key = event.key;
+    if ((key >= 'a' && key <= 'z') || (key >= 'A' && key <= 'Z') || key == ' ') {
+
+    }
+    else {
+      event.preventDefault();
+    }
+  }
+    
+  
+
+
+    isNumber(event, id, l) {
+      var mobile = (<HTMLInputElement>document.getElementById(id));
+      var data = mobile.value;
+      var key = event.key;
+      if (isNaN(key) || data.length > l)
+        event.preventDefault();
+    }
+  
 }
 window.onload=function(){
 const slidePage:HTMLInputElement=document.querySelector(".slidepage");
@@ -36,6 +58,7 @@ firtNextBtn.addEventListener("click",function(){
     progressCheck[current - 1].classList.add("active");
     current +=1;
 });
+
 
 
 nextBtnSec.addEventListener("click",function(){

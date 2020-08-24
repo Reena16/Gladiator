@@ -1,26 +1,26 @@
 
 <body>
-  
+  <div class="bg-img">
     <div class="container">
         
         <header>Loan Application Form</header>
         <div class="progress-bar">
             <div class="step">
-                <p>Personal Info</p>
+                <p style="color:#3577da;">Personal Info</p>
                 <div class="bullet">
                     <span>1</span>
                 </div>
                 <div class="check fas fa-check"></div>
             </div>
             <div class="step">
-                <p>Loan Eligibility</p>
+                <p style="color:#3577da;">Loan Eligibility</p>
                 <div class="bullet">
                     <span>2</span>
                 </div>  
                 <div class="check fas fa-check"></div>
             </div>
             <div class="step">
-                <p>Documents</p>
+                <p style="color:#3577da;">Documents</p>
                 <div class="bullet">
                     <span>3</span>
                 </div>
@@ -34,7 +34,7 @@
                     <div class="title">Basic Info</div>
                     <div class="field">
                         <div class="label">Customer Id</div>
-                        <input type="text">
+                        <input type="text" >
                     </div>
                     
                     
@@ -43,12 +43,12 @@
                         <select>
                             <option>Male</option>
                             <option>Female</option>
-                            <option>Other</option>
+                            
                         </select>
                     </div>
                     <div class="field">
                         <div class="label">Address</div>
-                        <input type="text" >
+                        <input type="text"  >
                     </div>
                     <div class="field">
                         <div class="label">Nationality</div>
@@ -67,19 +67,19 @@
                     <div class="title">Loan Eligibility</div>
                     <div class="field">
                         <div class="label">Retirment Age</div>
-                        <input type="text">
+                        <input type="number">
                     </div>
                     <div class="field">
                         <div class="label">Monthly Income</div>
-                        <input type="text">
+                        <input type="number">
                     </div>
                     <div class="field">
                         <div class="label">Loan Amount</div>
-                        <input type="text" >
+                        <input type="number" >
                     </div>
                     <div class="field">
                         <div class="label">Tenure</div>
-                        <input type="text">
+                        <input type="number">
                     </div>
                     <div class="field">
                         <div class="label">Down Payment</div>
@@ -87,11 +87,11 @@
                     </div>
                     <div class="field">
                         <div class="label">Number of Dependent</div>
-                        <input type="text" >
+                        <input type="number" >
                     </div>
                     <div class="field">
                         <div class="label">Expenses of Dependent</div>
-                        <input type="text">
+                        <input type="number">
                     </div>
                     <div class="field">
                         <div class="label">Maximum Loan Amount</div>
@@ -111,23 +111,28 @@
                    
                     <div class="field">
                         <div class="label">Aadhar Card</div>    
-                        <input type="text">
+                        <input type="text" name="aadhar" id="aadhar" placeholder="xxxx-xxxx-xxxx">
                     </div>  
                     <div class="field">
                         <div class="label">Pan Card</div>    
-                        <input type="text">
+                        <input type="number">
                     </div>  
                     <div class="field">
                         <div class="label">Property type</div>
-                        <input type="text">
+                        <select>
+                            <option>--Choose an option--</option>
+                            <option>Home-Construction Loan</option>
+                            <option>Home-Extension Loan</option>
+                            <option>Home-Improvements Loan</option>
+                        </select>
                     </div>
                     <div class="field">
                         <div class="label">Property Location</div>
-                        <input type="text">
+                        <input type="text"  (keypress)='isAName($event)'>
                     </div>
                     <div class="field">
                         <div class="label">Property Cost</div>
-                        <input type="text" >
+                        <input type="number" >
                     </div>
                     <div class="field">
                         <div class="label">Organization Type</div>
@@ -156,6 +161,6 @@
     </div>
 
     <!--<script src="script.js"></script>-->
-
+</div>
 </body>
 

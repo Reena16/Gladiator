@@ -12,6 +12,7 @@ export class RegisterComponent implements OnInit {
   confirmPass="";
   customer:Customer = new Customer();
   data:any;
+  message:string;
   constructor(private router: Router,private service:RegisterServiceService) { 
   }
   pass : boolean = false;
@@ -54,12 +55,24 @@ export class RegisterComponent implements OnInit {
     }
   register(){
     // alert(JSON.stringify(this.customer));
-    alert("Please Check Your Mail ID for you Customer ID");
+    
+    
     this.service.register(this.customer).subscribe(data=>{
-      this.data=data;
-      console.log(data);
+      if(data.status=='SUCCESS'){
+        alert("Thank you for registering with us. Please Check Your Mail ID for your Customer ID");
+        this.data=data;
+        this.message=data.message;
+        console.log(data);
+        this.router.navigate(['/loginLink']);
+      }
+      
+      else{
+        this.message=data.message;
+
+      }
+      
     })
-    this.router.navigate(['/loginLink']);
+   
     // alert(this.customer);
     // console.log(this.customer);
   }

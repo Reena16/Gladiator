@@ -11,7 +11,7 @@ body{
     position: absolute;
     left: 0;
     width: 250px;
-    height: 100%;
+    height: 130vh;
     transition: 0.5s;
     transition-property: left;
   }
@@ -78,7 +78,7 @@ body{
     margin-left: 250px;
     
   
-    height: 100vh;
+    height: 130vh;
     transition: 0.5s;
   }
   
@@ -120,16 +120,27 @@ body{
     .main{
         background-color:rgb(0,0,0,0.5);
      width:800px;
-     height: 1100px;
+     height: 1300px;
      margin:auto;}
     
     form{
         padding:10px;
      
     } 
-    
+
+    .custid{
+      position: absolute;
+      left:35%;
+      top: 12%;
+      line-height: 40px;
+      width:480px;
+      border-radius: 6px;
+      padding: 0 22px;
+      font-size: 16px;
+      color: #555;  
+    }
     #name{
-         width:100%;
+      width:100%;
       height:100px;
       
       
@@ -137,7 +148,7 @@ body{
     .name{
    margin-left:10px;
               
-     margin-top:30px;
+     margin-top:20px;
      width: 125px;
               color:black;
               font-size: 18px;
@@ -145,7 +156,8 @@ body{
   .firstname{
         position: absolute;
          left:35%;
-         top:14%;
+         top:25%;
+         
          line-height: 40px;
          border-radius: 6px;
          padding: 0 22px;
@@ -154,8 +166,8 @@ body{
          }
   .lastname{
         position: absolute;
-         left:60%;
-         top:14%;
+         left:55%;
+         top:25%;
          line-height: 40px;
          border-radius: 6px;
          padding: 0 22px;
@@ -168,7 +180,7 @@ body{
         text-transform: capitalize;
      font-size: 14px;
      left:35%;
-     top:22%;
+     top:30%;
      }   
   .lastlabel{
               position: absolute;
@@ -179,9 +191,9 @@ body{
      top:22%;
        } 
   .company{
-             position: absolute;
+      position: absolute;
        left:35%;
-       top: 35%;
+       top: 45%;
        line-height: 40px;
        width:480px;
           border-radius: 6px;
@@ -191,7 +203,7 @@ body{
    .dob{
           position:absolute;
     left:35%;
-       top:48%;
+       top:58%;
        line-height: 40px;
        width:480px;
           border-radius: 6px;
@@ -203,7 +215,7 @@ body{
      .city{
            position:absolute;
     left:35%;
-       top:64%;
+       top:70%;
        line-height: 40px;
        width:95px;
           border-radius: 6px;
@@ -214,7 +226,7 @@ body{
    .number{
            position:absolute;
     left:50%;
-       top:64%;
+       top:70%;
        line-height: 40px;
        width:255px;
           border-radius: 6px;
@@ -228,7 +240,7 @@ body{
         text-transform:capitalize;
         font-size:16px;
         left:35%;
-        top:71%;
+        top:78%;
        }
    .phone-number{
         position:absolute;
@@ -236,12 +248,12 @@ body{
         text-transform:capitalize;
         font-size:16px;
         left:50%;
-        top:71%;
+        top:78%;
        }
    .option{
            position:absolute;
     left:35%;
-       top:80%;
+       top:85%;
        line-height: 40px;
        width:485px;
        height:40px;
@@ -262,6 +274,32 @@ body{
       font-size:18px;
       
         } 
+
+        .psw{
+          position: absolute;
+       left:35%;
+       top: 99%;
+       line-height: 40px;
+       width:480px;
+          border-radius: 6px;
+       padding: 0 22px;
+       font-size: 16px;
+       color: #555;
+
+        }
+
+        .confirm{
+          position: absolute;
+          left:35%;
+          top: 110vh;
+          line-height: 40px;
+          width:480px;
+             border-radius: 6px;
+          padding: 0 22px;
+          font-size: 16px;
+          color: #555;
+
+        }
       
       .btn{
         color:white;
@@ -270,8 +308,8 @@ body{
         padding: 15px 50px;
         border-radius: 40px;
         position: absolute;
-        top:90%;
-        right:40%
+        top:125%;
+        right:40%;
     }
     .btn:hover{
       background-color: firebrick;
@@ -280,3 +318,7 @@ body{
       transition-property: background;
   
     }
+    .content{
+height: 1300x;
+    }
+    
