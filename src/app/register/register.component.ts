@@ -25,12 +25,7 @@ export class RegisterComponent implements OnInit {
       event.preventDefault();
     }
   }
-    confirmPassword():boolean {
-      if (this.customer.customerPassword == this.confirmPass){
-        return true;      
-      }
-      return false;
-    }
+    
   
     manageMobile() {
       var data = this.customer.customerMobileNumber;
@@ -48,6 +43,12 @@ export class RegisterComponent implements OnInit {
       var key = event.key;
       if (isNaN(key) || data.length > l)
         event.preventDefault();
+    }
+    confirmPassword():boolean {
+      if (this.customer.customerPassword == this.confirmPass){
+        return true;      
+      }
+      return false;
     }
   register(){
     // alert(JSON.stringify(this.customer));

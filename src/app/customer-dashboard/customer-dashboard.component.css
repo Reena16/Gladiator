@@ -5,12 +5,12 @@ body{
   }
   
   .sidebar {
-    background: #22242A;
+     background: #22242A; 
     padding-top: 25px;
-    position: fixed;
+    position: absolute;
     left: 0;
     width: 250px;
-    height: 100%;
+    height: 90%;
     transition: 0.5s;
     transition-property: left;
   }

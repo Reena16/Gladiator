@@ -27,6 +27,7 @@ import { TestComponent } from './test/test.component';
 import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
 import { CustomerDashboardComponent } from './customer-dashboard/customer-dashboard.component';
 import { LoanApplicationComponent } from './loan-application/loan-application.component';
+import { UpdateProfileComponent } from './update-profile/update-profile.component';
 
  FusionChartsModule.fcRoot(
    FusionCharts,
@@ -53,7 +54,8 @@ import { LoanApplicationComponent } from './loan-application/loan-application.co
     DashboardAdminComponent,
    
     CustomerDashboardComponent,
-    LoanApplicationComponent
+    LoanApplicationComponent,
+    UpdateProfileComponent
   
   ],
   imports: [

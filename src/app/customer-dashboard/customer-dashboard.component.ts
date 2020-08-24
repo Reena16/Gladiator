@@ -12,10 +12,10 @@ export class CustomerDashboardComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    this.customerName=sessionStorage.getItem("customerFirstName")
+    this.customerName=sessionStorage.getItem("customerFirstName");
   }
-  navigate(){
-    this.router.navigate(['#']);
+  application(){
+    this.router.navigate(['loanapplicationlink']);
 
   }
 
