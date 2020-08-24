@@ -30,25 +30,8 @@
     padding: 1px 16px;
     height: 590px;
     vertical-align: top;
-    background-image: url("src\assets\adminDash.jpg");
     background-size: 1250px 600px;
     opacity: 0.8;
-    /* background-size:cover; */
+    background-color: lightslategray;
   }
   
-  @media screen and (max-width: 700px) {
-    .sidebar {
-      width: 100%;
-      height: auto;
-      position: relative;
-    }
-    .sidebar a {float: left;}
-    div.content {margin-left: 0;}
-  }
-
-  h1{
-      text-align: center;
-      margin-top: 250px;
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-      text-shadow: black 2px 2px 1px;
-  }

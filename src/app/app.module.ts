@@ -26,6 +26,8 @@ import { RegisterComponent } from './register/register.component';
 import { TestComponent } from './test/test.component';
 import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
 import { CustomerDashboardComponent } from './customer-dashboard/customer-dashboard.component';
+import { ViewAllUsersComponent } from './view-all-users/view-all-users.component';
+import { UpdateDetailsComponent } from './update-details/update-details.component';
 import { LoanApplicationComponent } from './loan-application/loan-application.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
 
@@ -52,6 +54,10 @@ import { UpdateProfileComponent } from './update-profile/update-profile.componen
     TestComponent,
    
     DashboardAdminComponent,
+
+    ViewAllUsersComponent,
+   
+    UpdateDetailsComponent,
    
     CustomerDashboardComponent,
     LoanApplicationComponent,

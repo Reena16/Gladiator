@@ -11,6 +11,8 @@ import { ResetPasswordComponent } from "./reset-password/reset-password.componen
 import { RegisterComponent } from "./register/register.component";
 import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
 import { CustomerDashboardComponent } from "./customer-dashboard/customer-dashboard.component";
+import { ViewAllUsersComponent } from './view-all-users/view-all-users.component';
+import { UpdateDetailsComponent } from './update-details/update-details.component';
 import { LoanApplicationComponent} from './loan-application/loan-application.component';
 import { UpdateProfileComponent } from "./update-profile/update-profile.component";
 
@@ -46,6 +48,11 @@ const routes: Routes = [
   },
   {
   path:'dashboardAdmin',component:DashboardAdminComponent
+  },{
+     path:'viewAllUser',component:ViewAllUsersComponent
+  },
+  {
+    path:'updateDetails',component:UpdateDetailsComponent
   },
   {
   path:'customerDashboard',component:CustomerDashboardComponent
