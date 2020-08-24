@@ -18,23 +18,23 @@
 Name </h2>
 <input class="firstname" type="text" name="first_name" placeholder="Enter first name" value={{customerName}} readonly ><br>
         <label class="firstlabel">first name</label>
-        <input class="lastname" type="text" name="last_name" placeholder="Enter last name" value={{customerName}} readonly ><br>
+        <input class="lastname" type="text" name="last_name" placeholder="Enter last name" value="Gupta" readonly ><br>
         <label class="lastlabel">last name</label>
     </div>
 <h2 class="name">
 Email </h2>
-<input class="company" type="email" name="eml" placeholder="Enter email" [(ngModel)]=customer.customerEmail pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+<input class="company" type="email" name="eml" placeholder="Enter email" [(ngModel)]=customer.customerEmail pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br>
 <h2 class="name">
 Date of Birth</h2>
-<input class="email" type="date" name="dob" [(ngModel)]=customer.customerdateOfBirth required>
+<input class="dob" type="date" name="dob" [(ngModel)]=customer.customerdateOfBirth required><br>
     <h2 class="name">
 Contact</h2>
-<input class="Code" type="text" name="area_code" placeholder="Enter city"[(ngModel)]=customer.customerCity required >
-    <label class="area-code"> City</label>
+<input class="city" type="text" name="area_code" placeholder="Enter city"[(ngModel)]=customer.customerCity required >
+    <label class="city-label"> City</label>
     <input class="number" type="tel" name="phone" id="phone" placeholder="xxx-xxx-xxxx"  (keypress)='isNumber($event,"phone",10)'  minlength="10" maxlength="10"
-    [(ngModel)]="customer.customerMobileNumber" required>>
+    [(ngModel)]="customer.customerMobileNumber" required>
     <label class="phone-number">Contact Number</label>
-    
+    <br>
 
 
     <h2 class="name">
@@ -47,8 +47,8 @@ Employment Type</h2>
        
     </select>
     
-
-    <button  type="submit">Update Info</button>
+<br>
+    <button class="btn" type="submit">Update Info</button>
    
     
 

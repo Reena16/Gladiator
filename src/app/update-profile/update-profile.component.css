@@ -73,6 +73,7 @@ body{
 
   
   .content{
+    background-color: gainsboro;
     text-align: center;
     margin-left: 250px;
     
@@ -187,10 +188,10 @@ body{
        padding: 0 22px;
        font-size: 16px;
        color: #555;  }
-   .email{
-          position:relative;
-    left:200px;
-       top:-37px;
+   .dob{
+          position:absolute;
+    left:35%;
+       top:48%;
        line-height: 40px;
        width:480px;
           border-radius: 6px;
@@ -199,10 +200,10 @@ body{
        color: #555;  
       }     
    
-     .Code{
-           position:relative;
-    left:200px;
-       top:-37px;
+     .city{
+           position:absolute;
+    left:35%;
+       top:64%;
        line-height: 40px;
        width:95px;
           border-radius: 6px;
@@ -211,9 +212,9 @@ body{
        color: #555;  
     }
    .number{
-           position:relative;
-    left:200px;
-       top:-37px;
+           position:absolute;
+    left:50%;
+       top:64%;
        line-height: 40px;
        width:255px;
           border-radius: 6px;
@@ -221,26 +222,26 @@ body{
        font-size: 16px;
        color: #555; 
        }
-   .area-code{
-              position:relative;
+   .city-label{
+              position:absolute;
         color:black;
         text-transform:capitalize;
         font-size:16px;
-        left:54px;
-        top:-4px;
+        left:35%;
+        top:71%;
        }
    .phone-number{
-        position:relative;
+        position:absolute;
         color:black;
         text-transform:capitalize;
         font-size:16px;
-        left:-100px;
-        top:-2px;
+        left:50%;
+        top:71%;
        }
    .option{
-           position:relative;
-    left:200px;
-       top:-37px;
+           position:absolute;
+    left:35%;
+       top:80%;
        line-height: 40px;
        width:485px;
        height:40px;
@@ -261,18 +262,21 @@ body{
       font-size:18px;
       
         } 
-       .radio{
-           display:inline-block;
-     padding-right:70px;
-     font-size:25px;
-     margin-left:25px;
-     margin-top:15px;
-     color:black;
-     }
-    .radio input{
-                width:20px;
-       height:20px;
-       border-radius:50%;
-       cursor:pointer;
-       outline:none;
-      } 
+      
+      .btn{
+        color:white;
+        font-size: 15px;
+        background-color: #22242A;
+        padding: 15px 50px;
+        border-radius: 40px;
+        position: absolute;
+        top:90%;
+        right:40%
+    }
+    .btn:hover{
+      background-color: firebrick;
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+      transition: 0.5s;
+      transition-property: background;
+  
+    }
