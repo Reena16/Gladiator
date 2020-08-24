@@ -9,11 +9,19 @@ import { UpdateAdminDetailsService } from "../services/update-admin-details.serv
 })
 export class UpdateDetailsComponent implements OnInit {
 
+  adId:string;
   updateAdmin: AdminUpdate = new AdminUpdate();
   data:any;
+  date:Date;
   constructor(private router: Router,private service:UpdateAdminDetailsService) { }
 
   ngOnInit(): void {
+    this.adId=sessionStorage.getItem("adminId");
+    this.service.update(this.updateAdmin).subscribe(data=>{
+      this.updateAdmin=data;
+      console.log(this.updateAdmin);
+    })
+    this.router.navigate(['/updateDetails']);
   }
 
   isAName(event) {
@@ -33,12 +41,5 @@ export class UpdateDetailsComponent implements OnInit {
     if (isNaN(key) || data.length > l)
       event.preventDefault();
   }
-  update() {
-    alert("Details Updated!!");
-    this.service.update(this.updateAdmin).subscribe(data=>{
-      this.data=data;
-      console.log(data);
-    })
-    this.router.navigate(['/updateDetails']);
-  }
+  
 }

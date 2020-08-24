@@ -32,6 +32,7 @@
     vertical-align: top;
     background-size: 1250px 600px;
     opacity: 0.8;
+    align-self: center;
   }
 
   .btn {
@@ -55,8 +56,5 @@
   }
 
   .tab{
-    border: #3b526f 1px;
-    align-content: center;
-    padding: 8px;  
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  }
+    }
+ 

@@ -26,9 +26,9 @@ export class AdminLoginComponent implements OnInit {
       event.preventDefault();
   }
   loginAdmin() {
-    alert(JSON.stringify(this.login));
+   // alert(JSON.stringify(this.login));
     this.service.loginAdmin(this.login).subscribe(data => {
-      alert(JSON.stringify(data));
+     // alert(JSON.stringify(data));
       this.status = data;
       if (data.status == "SUCCESS") {
         let adminId = data.adminId;

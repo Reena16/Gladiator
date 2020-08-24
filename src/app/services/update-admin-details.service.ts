@@ -9,9 +9,15 @@ export class UpdateAdminDetailsService {
 
   constructor(private http:HttpClient) { }
 
-  update(update:AdminUpdate){
-    let url="http://localhost:8188/adminLogin";
+  // findId(id):Observable<AdminUpdate>{
+  //   let url="http://localhost:8182/updateAdmin";
+  //   return this.http.post(url,id)
+  // }
+
+
+  update(admin:AdminUpdate):Observable<any>{
+    let url="http://localhost:8182/updateAdmin";
     // let url="http://localhost:8181/adminLogin";
-     return this.http.post(url,update);
+     return this.http.post(url,admin.adminId);
   }
 }
