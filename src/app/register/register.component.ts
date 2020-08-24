@@ -50,7 +50,8 @@ export class RegisterComponent implements OnInit {
         event.preventDefault();
     }
   register(){
-    alert(JSON.stringify(this.customer));
+    // alert(JSON.stringify(this.customer));
+    alert("Please Check Your Mail ID for you Customer ID");
     this.service.register(this.customer).subscribe(data=>{
       this.data=data;
       console.log(data);
