@@ -8,19 +8,35 @@ import { UpdateUserService } from "../update-user.service";
   styleUrls: ['./update-profile.component.css']
 })
 export class UpdateProfileComponent implements OnInit {
+  confirmPass ="";
 
   customerName:string;
   customerSurname:string;
   id:number;
+  emptype:string;
   email : string;
-  enteredPassword :string;
+  dob : Date;
+  city:string;
+  contact:string;
+  pass :string;
   customer= new Customer();
+
   constructor(private service:UpdateUserService) {
-    this.id = parseInt(sessionStorage.getItem('customerId'));
+    this.id = parseInt(sessionStorage.customerId);
     this.service.findById(this.id).subscribe(data=>{
-      console.log(data);
+      console.log(data.customerId);
+      this.customer = data;
       this.customerName = data.customerFirstName;
-      this.customerSurname = data.customerLastname;
+      this.customerSurname = data.customerLastName;
+    //this.id = data.customerId;
+      this.id = sessionStorage.customerId;
+      this.email = data.customerEmail;
+      this.dob = data.customerdateOfBirth;
+      this.emptype = data.customerEmploymentType;
+      this.city = data.customerCity;
+      this.contact=data.customerMobileNumber;
+      this.pass = data.customerPassword;
+
       //alert("Information updated successfully");
     })
   }
@@ -40,6 +56,12 @@ export class UpdateProfileComponent implements OnInit {
     else {
       event.preventDefault();
     }
+  }
+  confirmPassword(): boolean {
+    if (this.pass == this.confirmPass){
+      return true;      
+    }
+    return false;
   }
     
   
@@ -61,16 +83,12 @@ export class UpdateProfileComponent implements OnInit {
         event.preventDefault();
     }
 
-  findById(){
-    this.service.findById(this.customer).subscribe(data=>{
-      this.customer = data;
-      //alert("Information updated successfully");
-    })
 
-  }
+  
   update(){
     this.service.update(this.customer).subscribe(data=>{
-      alert("Information updated successfully");
+
+      alert(JSON.stringify(data));
     })
 
   }

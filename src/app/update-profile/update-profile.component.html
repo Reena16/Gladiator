@@ -15,33 +15,33 @@
 
 
         <h2 class="name"> Customer ID</h2>
-        <input class="custid" type="text" name="custid" [(ngModel)]=customer.customerId value={{customer.customerId}}
+        <input class="custid" type="text" name="custid" [(ngModel)]=customer.customerId value={{id}}
             readonly><br>
 
         <div id="name">
             <h2 class="name">
                 Name </h2>
             <input class="firstname" type="text" name="first_name" placeholder="Enter first name"
-                [(ngModel)]=customer.customerFirstName value={{customer.customerFirstName}} readonly><br>
+                [(ngModel)]=customer.customerFirstName value={{customerName}} readonly><br>
             <input class="lastname" type="text" name="last_name" placeholder="Enter last name"
-                [(ngModel)]=customer.customerLastName value={{customer.customerLastName}} readonly>
+                [(ngModel)]=customer.customerLastName value={{customerSurname}} readonly>
         </div>
         <h2 class="name">
             Email </h2>
         <input class="company" type="email" name="eml" placeholder="Enter email" [(ngModel)]=customer.customerEmail
-            value={{customer.customerEmail}} readonly><br>
+            value={{email}} readonly><br>
         <h2 class="name">
             Date of Birth</h2>
         <input class="dob" type="date" name="dob" [(ngModel)]=customer.customerdateOfBirth
-            value={{customer.customerdateOfBirth}} required><br>
+            value={{dob}} required><br>
         <h2 class="name">
             Contact</h2>
         <input class="city" type="text" name="area_code" placeholder="Enter city" [(ngModel)]=customer.customerCity
-            value={{customer.customerCity}} required>
+            value={{city}} required>
         <label class="city-label"> City</label>
         <input class="number" type="tel" name="phone" id="phone" placeholder="xxx-xxx-xxxx"
             (keypress)='isNumber($event,"phone",10)' minlength="10" maxlength="10"
-            [(ngModel)]="customer.customerMobileNumber" value=customer.customerMobileNumber required>
+            [(ngModel)]="customer.customerMobileNumber" value={{contact}} required>
         <label class="phone-number">Contact Number</label>
         <br>
 
@@ -49,7 +49,7 @@
         <h2 class="name">
             Employment Type</h2>
         <select class="option" name="subject" [(ngModel)]=customer.customerEmploymentType
-            value=customer.customerEmploymentType required>
+            value={{emptype}} required>
 
             <option disabled="disabled" selected="selected">--Choose option--</option>
             <option>Salaried</option>
@@ -60,8 +60,13 @@
         <br>
         <h2 class="name">
             Password </h2>
-        <input class="psw" type="password" name="psw" placeholder="Enter password" [(ngModel)]=customer.customerPassword
+        <input class="psw" type="password" name="psw" placeholder="Enter password" [(ngModel)]=customer.customerPassword value ={{pass}}
             required>
+            <h2 class="name">
+                Confirm password </h2>
+            <input class="confirm" type="password" name="conpsw" placeholder="Confirm password"
+                [(ngModel)]='confirmPass' required>
+            <span *ngIf='!confirmPassword()' style="color: red; font-weight: bold;">Oops!! Password mismatch</span>
 
         <button class="btn" type="submit">Update Info</button>
 
