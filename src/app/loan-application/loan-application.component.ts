@@ -11,7 +11,7 @@ export class LoanApplicationComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
 }
 window.onload=function(){
 const slidePage:HTMLInputElement=document.querySelector(".slidepage");
