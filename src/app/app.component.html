@@ -14,12 +14,13 @@
 
 <div>
         <div class="navbar">
-          <a routerLink='/infoLink'>About Us</a>
+          <a routerLink='/infoLink' >About Us</a>
           <a routerLink='/calculatorLink'>Calculator</a>
-          <a routerLink='/registerLink'>Sign up</a> <!-- ngIf !session -->
+          <a routerLink='/FaqLink' >FAQs</a>
+          <a routerLink='/registerLink' *ngIf='!flag' >Sign up</a> <!-- ngIf !session -->
 
-          <div class="dropdown" >
-            <button class="dropbtn">Login
+          <div class="dropdown">
+            <button class="dropbtn" *ngIf='!flag' >Login
               <i class="fa fa-caret-down"></i>
         
             </button>
@@ -28,10 +29,11 @@
               <a routerLink='/adminLink' style="text-align: center;">Admin</a>
               
             </div>
+            
            
           </div>
-          <!-- ngIf session logout button -->
-          <a routerLink='/FaqLink'>FAQ</a>
+          <a routerLink='/dashboardAdmin' *ngIf='flag' >Dashboard</a>
+          <a routerLink='/infoLink' style="float: right;" (click)='logOut()' *ngIf='flag'>LogOut</a>
         </div>
 
         

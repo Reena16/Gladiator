@@ -33,12 +33,13 @@ constructor(private router : Router,private service : LoginserviceService ){}
        // alert(JSON.stringify(data))
      //   this.status=data;
         if(data.status=='SUCCESS'){
-          
+          let flag = 'true';
           let customerId= data.customerId;
           let customerName=data.customerFirstName;
           this.message = data.message;
           sessionStorage.setItem('customerId',customerId);
           sessionStorage.setItem('customerFirstName',customerName);
+          sessionStorage.setItem('isLogedIn',flag);
           this.router.navigate(['customerDashboard']);
           
         }
