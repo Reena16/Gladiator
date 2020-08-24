@@ -12,7 +12,8 @@ export class RegisterComponent implements OnInit {
   confirmPass="";
   customer:Customer = new Customer();
   data:any;
-  constructor(private router: Router,private service:RegisterServiceService) { }
+  constructor(private router: Router,private service:RegisterServiceService) { 
+  }
   pass : boolean = false;
   ngOnInit(): void {
   }
@@ -25,12 +26,7 @@ export class RegisterComponent implements OnInit {
       event.preventDefault();
     }
   }
-    confirmPassword():boolean {
-      if (this.customer.customerPassword == this.confirmPass){
-        return true;      
-      }
-      return false;
-    }
+    
   
     manageMobile() {
       var data = this.customer.customerMobileNumber;
@@ -48,6 +44,12 @@ export class RegisterComponent implements OnInit {
       var key = event.key;
       if (isNaN(key) || data.length > l)
         event.preventDefault();
+    }
+    confirmPassword():boolean {
+      if (this.customer.customerPassword == this.confirmPass){
+        return true;      
+      }
+      return false;
     }
   register(){
     // alert(JSON.stringify(this.customer));
