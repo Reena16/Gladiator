@@ -13,59 +13,64 @@ import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.compo
 import { CustomerDashboardComponent } from "./customer-dashboard/customer-dashboard.component";
 import { ViewAllUsersComponent } from './view-all-users/view-all-users.component';
 import { UpdateDetailsComponent } from './update-details/update-details.component';
-import { LoanApplicationComponent} from './loan-application/loan-application.component';
+import { LoanApplicationComponent } from './loan-application/loan-application.component';
 import { UpdateProfileComponent } from "./update-profile/update-profile.component";
+import { AuthGuard } from './auth/auth.guard';
+import { ViewAllApplicationsComponent } from './view-all-applications/view-all-applications.component';
 
 const routes: Routes = [
   {
-    path:'',component:HomePageComponent
+    path: '', component: HomePageComponent
   },
   {
-    path:'homeLink',component:HomePageComponent
+    path: 'homeLink', component: HomePageComponent
   },
   {
-    path:'calculatorLink',component:CalculatorComponent
+    path: 'calculatorLink', component: CalculatorComponent
   },
   {
-    path:'FaqLink',component:FaqPageComponent
+    path: 'FaqLink', component: FaqPageComponent
   },
   {
-    path:'loginLink',component:LoginPageComponent
+    path: 'loginLink', component: LoginPageComponent
   },
   {
-    path:'adminLink',component:AdminLoginComponent
+    path: 'adminLink', component: AdminLoginComponent
   },
   {
-    path:'infoLink',component:BankInfoComponent
-  },{
-    path:'forgotPasswordLink',component:ForgotPasswordComponent
+    path: 'infoLink', component: BankInfoComponent
+  }, {
+    path: 'forgotPasswordLink', component: ForgotPasswordComponent
   },
   {
-    path:'resetPasswordLink',component:ResetPasswordComponent
+    path: 'resetPasswordLink', component: ResetPasswordComponent
   },
   {
-    path:'registerLink',component:RegisterComponent
+    path: 'registerLink', component: RegisterComponent
   },
   {
-  path:'dashboardAdmin',component:DashboardAdminComponent
-  },{
-     path:'viewAllUser',component:ViewAllUsersComponent
+    path: 'dashboardAdmin', component: DashboardAdminComponent, canActivate: [AuthGuard]
+  }, 
+  {
+    path: 'viewAllUser', component: ViewAllUsersComponent, canActivate: [AuthGuard]
   },
   {
-    path:'updateDetails',component:UpdateDetailsComponent
+    path: 'updateDetails', component: UpdateDetailsComponent, canActivate: [AuthGuard]
   },
   {
-  path:'customerDashboard',component:CustomerDashboardComponent
-    
+    path: 'customerDashboard', component: CustomerDashboardComponent, canActivate: [AuthGuard]
+
   },
   {
-    
-      path:'loanapplicationlink',component:LoanApplicationComponent
+    path: 'loanapplicationlink', component: LoanApplicationComponent, canActivate: [AuthGuard]
   },
   {
-    
-    path:'updateUserProfile',component:UpdateProfileComponent
-},
+    path: 'updateUserProfile', component: UpdateProfileComponent, canActivate: [AuthGuard]
+  },
+  {
+
+    path: 'viewAllApplications', component: ViewAllApplicationsComponent, canActivate: [AuthGuard]
+  },
 
 
 

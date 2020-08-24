@@ -1,0 +1,45 @@
+<div>
+    <h1 style="text-align: center;">All Applications</h1>
+        <table style="table-layout: auto;">
+            <tr>
+                <th>Application Id</th>
+                <th>Customer ID</th>
+                <th>Gender</th>
+                <th>Address</th>
+                <th>Nationality</th>
+                <th>Retirement Age</th>
+                <th>Income</th>
+                <th>Loan Amount</th>
+                <th>Tenure</th>
+                <th>Down Payment</th>
+                <th>Maritial Status</th>
+                <th>Number of Dependents</th>
+                <th>Dependent Monthly Expenses</th>
+                <th>Personal Expenses</th>
+                <th>Existing Loan</th>
+                <th>EMI of Existing Loan</th>
+                <th>Status</th>
+                <th>Appointment Date</th>
+            </tr>
+            <tr *ngFor="let a of allApplications">
+                <td>{{a.applicationId}}</td>
+                <td>{{a.customer}}</td>
+                <td>{{a.gender}}</td>
+                <td>{{a.address}}</td>
+                <td>{{a.nationality}}</td>
+                <td>{{a.retirementAge}}</td>
+                <td>{{a.income}}</td>
+                <td>{{a.loanAmount}}</td>
+                <td>{{a.tenure}}</td>
+                <td>{{a.downPayment}}</td>
+                <td>{{a.maritialStatus}}</td>
+                <td>{{a.noOfDependents}}</td>
+                <td>{{a.depandentMonthlyExpenses}}</td>
+                <td>{{a.personlExpenses}}</td>
+                <td>{{a.existingLoan}}</td>
+                <td>{{a.emiExistingLoan}}</td>
+                <td>{{a.loanStatus}}</td>
+                <td>{{a.appointmentDate}}</td>
+            </tr>
+        </table>
+</div>
