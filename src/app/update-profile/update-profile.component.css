@@ -76,7 +76,8 @@ body{
     background-color: gainsboro;
     text-align: center;
     margin-left: 250px;
-    
+   /* background-image: url("src\assets\userDash.png");*/
+    background-size: cover;
   
     height: 130vh;
     transition: 0.5s;
@@ -126,7 +127,7 @@ body{
     .custid{
       position: absolute;
       left:35%;
-      top: 12%;
+      top: 13%;
       line-height: 40px;
       width:480px;
       border-radius: 6px;
@@ -143,7 +144,7 @@ body{
     .name{
    margin-left:10px;
               
-     margin-top:20px;
+     margin-top:26px;
      width: 125px;
               color:black;
               font-size: 18px;
@@ -151,7 +152,7 @@ body{
   .firstname{
         position: absolute;
          left:35%;
-         top:25%;
+         top:27%;
          
          line-height: 40px;
          border-radius: 6px;
@@ -162,7 +163,7 @@ body{
   .lastname{
         position: absolute;
          left:55%;
-         top:25%;
+         top:27%;
          line-height: 40px;
          border-radius: 6px;
          padding: 0 22px;
@@ -188,7 +189,7 @@ body{
   .company{
       position: absolute;
        left:35%;
-       top: 45%;
+       top: 42%;
        line-height: 40px;
        width:480px;
           border-radius: 6px;
@@ -198,7 +199,7 @@ body{
    .dob{
           position:absolute;
     left:35%;
-       top:58%;
+       top:55%;
        line-height: 40px;
        width:480px;
           border-radius: 6px;
@@ -210,7 +211,7 @@ body{
      .city{
            position:absolute;
     left:35%;
-       top:70%;
+       top:68%;
        line-height: 40px;
        width:95px;
           border-radius: 6px;
@@ -221,7 +222,7 @@ body{
    .number{
            position:absolute;
     left:50%;
-       top:70%;
+       top:68%;
        line-height: 40px;
        width:255px;
           border-radius: 6px;
@@ -235,7 +236,7 @@ body{
         text-transform:capitalize;
         font-size:16px;
         left:35%;
-        top:78%;
+        top:77%;
        }
    .phone-number{
         position:absolute;
@@ -243,12 +244,12 @@ body{
         text-transform:capitalize;
         font-size:16px;
         left:50%;
-        top:78%;
+        top:77%;
        }
    .option{
            position:absolute;
     left:35%;
-       top:85%;
+       top:84%;
        line-height: 40px;
        width:485px;
        height:40px;
@@ -273,7 +274,7 @@ body{
         .psw{
           position: absolute;
        left:35%;
-       top: 99%;
+       top: 100%;
        line-height: 40px;
        width:480px;
           border-radius: 6px;
@@ -303,7 +304,7 @@ body{
         padding: 15px 50px;
         border-radius: 40px;
         position: absolute;
-        top:125%;
+        top:127%;
         right:40%;
     }
     .btn:hover{

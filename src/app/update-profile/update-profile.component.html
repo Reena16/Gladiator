@@ -4,7 +4,7 @@
     <a href="#"><i class="fa fa-fw fa-user"></i><span>Myprofile</span></a>
     <a routerLink='/updateUserProfile'><i class="fa fa-id-card"></i><span>Update profile</span></a>
 
-    <a href="#"><i class="fa fa-bank"></i><span>Apply Loan</span></a>
+    <a routerLink='/loanapplicationlink'><i class="fa fa-bank"></i><span>Apply Loan</span></a>
     <a href="#"><i class="fa fa-check"></i><span>Track loan status</span></a>
     <a href="#"><i class="fa fa-inr"></i><span>EMI status</span></a>
     <a href="#"><i class="fa fa-cog"></i><span>Settings</span></a>
@@ -18,14 +18,14 @@
         <input class="custid" type="text" name="custid" [(ngModel)]=customer.customerId value={{id}}
             readonly><br>
 
-        <div id="name">
+        
             <h2 class="name">
                 Name </h2>
             <input class="firstname" type="text" name="first_name" placeholder="Enter first name"
                 [(ngModel)]=customer.customerFirstName value={{customerName}} readonly><br>
             <input class="lastname" type="text" name="last_name" placeholder="Enter last name"
                 [(ngModel)]=customer.customerLastName value={{customerSurname}} readonly>
-        </div>
+        
         <h2 class="name">
             Email </h2>
         <input class="company" type="email" name="eml" placeholder="Enter email" [(ngModel)]=customer.customerEmail
@@ -61,7 +61,7 @@
         <h2 class="name">
             Password </h2>
         <input class="psw" type="password" name="psw" placeholder="Enter password" [(ngModel)]=customer.customerPassword value ={{pass}}
-            required>
+            readonly>
             <h2 class="name">
                 Confirm password </h2>
             <input class="confirm" type="password" name="conpsw" placeholder="Confirm password"

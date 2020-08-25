@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ApplyLoanService } from "../apply-loan.service";
+import { Customer } from '../models/customer';
+import { Application } from '../application';
+
 
 @Component({
   selector: 'app-loan-application',
@@ -7,7 +11,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoanApplicationComponent implements OnInit {
 
-  constructor() { }
+  id:number;
+  customer=new Customer();
+  application = new Application();
+  maxLoan :number;
+  
+  constructor(private service : ApplyLoanService) {
+    this.id = parseInt(sessionStorage.customerId);
+    this.service.findById(this.id).subscribe(data=>{
+    console.log(data);
+    // this.customer = data;
+    // this.application.customer = this.customer;
+    this.id = sessionStorage.customerId;
+    this.application.customer = data;
+    this.application.customer.customerId = sessionStorage.customerId;
+    //this.maxLoan = data.maxLoanAmount;
+   })
+  }
 
   ngOnInit(): void {
   }
@@ -32,6 +52,13 @@ export class LoanApplicationComponent implements OnInit {
       var key = event.key;
       if (isNaN(key) || data.length > l)
         event.preventDefault();
+    }
+
+    applyLoan(){
+      this.service.applyloan(this.application).subscribe(data=>{
+       // alert(JSON.stringify(data));
+  // alert("Registration successful");
+      })
     }
   
 }
@@ -75,10 +102,10 @@ submitBtn.addEventListener("click",function(){
     progressText[current - 1].classList.add("active");
     progressCheck[current - 1].classList.add("active");
     current +=1;
-    setTimeout(function(){
-        alert("You're successfully Registered");
-        location.reload();
-    }, 800);
+    // setTimeout(function(){
+    //     alert("You're successfully Registered");
+    //     location.reload();
+    // }, 800);
 });
 
 //Previous Button
