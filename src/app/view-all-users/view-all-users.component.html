@@ -4,33 +4,45 @@
     <a href="#">Find a User</a>
     <a routerLink='/viewAllUser'>View All Users</a>
     <a href="#">View All Loan Details</a>
-    <a routerLink='/viewUserById'>View User by Id</a>
+    <a routerLink='/viewUserById'>View All Applications</a>
     <a href="#">Update Loan Status</a>
     <a href="#">Download Documents</a>
 </div>
 <div class="content">
-    <table style="object-position: center;">
-        <tr>
-            <th>Customer Id</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email</th>
-            <th>Date Of Birth</th>
-            <th>City</th>
-            <th>Mobile Number</th>
-            <th>Employment Type</th>
-        </tr>
-        <tr>
-            <ng-container *ngFor="let c of data.customer">
-            <td>{{c.customerId}}</td>
-            <td>{{c.customerFirstName}}</td>
-            <td>{{c.customerLastName}}</td>
-            <td>{{c.customerEmail}}</td>
-            <td>{{c.customerdateOfBirth}}</td>
-            <td>{{c.customerCity}}</td>
-            <td>{{c.customerMobileNumber}}</td>
-            <td>{{c.customerEmploymentType}}</td>
-        </ng-container>
-        </tr>
-    </table>
+    <h1 style="text-align: center;">All Customers</h1>
+    <div class="faq-container" *ngFor="let c of allCustomers">
+        <dl class="faq" >
+            <dt>
+                <button aria-expanded="false" aria-controls="faq1_desc">{{c.customerId}}
+                </button>
+            </dt>
+            <dd>
+                <p id="faq1_desc" class="desc">
+                   Hello
+                    <!-- 
+                    <table>    
+                        <tr>       
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Date Of Birth</th>
+                            <th>City</th>
+                            <th>Contact</th>
+                            <th>Employment Type</th>
+                        </tr>
+                        <tr>
+                            <td>{{c.customerFirstName }}</td>
+                            <td>{{c.customerLastName }}</td>
+                            <td>{{c.customerEmail}}</td>
+                            <td>{{c.customerdateOfBirth }}</td>
+                            <td>{{c.customerCity}}</td>
+                            <td>{{c.customerMobileNumber}}</td>
+                            <td>{{c.customerEmploymentType}}</td>
+                        </tr>
+                    
+                </table>-->
+                </p>
+            </dd>
+        </dl>
+    </div>
 </div>

@@ -1,24 +1,33 @@
 import { Component, OnInit } from '@angular/core';
-import { Customer } from '../models/customer';
+
+import { AdminLoginService } from '../services/admin-login.service';
+
 
 @Component({
   selector: 'app-view-all-users',
-  templateUrl: './view-all-users.component.html',
-  styleUrls: ['./view-all-users.component.css']
+ 
+ templateUrl: './view-all-users.component.html',
+  
+styleUrls: ['./view-all-users.component.css']
 })
+
 export class ViewAllUsersComponent implements OnInit {
 
-  customer:Customer=new Customer();
-  data:any;
-  constructor() { }
+  
+allCustomers:any;
 
-  ngOnInit(): void {
-  }
-
-  getData(){
-
-  }
-  getCustomer(){
+constructor(private adminService:AdminLoginService) { 
     
+adminService.viewAllCustomers().subscribe(data=>{
+     
+this.allCustomers=data;
+    
+console.log(this.allCustomers);
+    })
   }
+ 
+ngOnInit(): void {
+  }
+
+
 }

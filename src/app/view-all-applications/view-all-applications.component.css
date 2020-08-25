@@ -4,7 +4,7 @@
     width: 200px;
     background-color: #f1f1f1;
     position:absolute;
-    height: 630px;
+    height: 590px;
     overflow: auto;
   }
   
@@ -24,9 +24,7 @@
     background-color: #555;
     color: white;
   }
-  
   div.content {
-    
     padding: 20px 200px;
     height: 590px;
     vertical-align: top;
@@ -52,4 +50,13 @@
   .len{
     width: 400px;
 
+  }
+ @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
   }

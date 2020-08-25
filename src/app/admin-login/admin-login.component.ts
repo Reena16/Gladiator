@@ -36,9 +36,9 @@ export class AdminLoginComponent implements OnInit {
         this.message = data.message;
         sessionStorage.setItem("adminId", adminId);
         sessionStorage.setItem("adminName", adminName);
-        localStorage.setItem('isLogedIn',flag);
+        localStorage.setItem('isLogedIn', flag);
         this.router.navigate(['/dashboardAdmin']);
-        
+
       } else {
         this.message = data.message;
       }
