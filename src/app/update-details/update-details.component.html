@@ -8,58 +8,39 @@
     <a routerLink='/manageLoanStatus'>Manage Loan Application</a>
     <a href="#">Download Documents</a>
 </div>
-<div class="content" >
-    <form (ngSubmit)="update()" class="form" style="align-content: center;">
-        <table style="align-content: center;padding: 8px;  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-            <tr>
-                <td><h3>Admin Id :</h3></td>
-                <td ><input type="text" class="len" placeholder="Enter Admin Id"  (keypress)='isNumber($event,"uid",10)'[(ngModel)]='updateAdmin.adminId'></td>
-            </tr>
-            <tr>
-                <td><h3>First Name :</h3></td>
-                <td ><input type="text" class="len" name="first_name" placeholder="Enter first name" (keypress)='isAName($event)'
-                        [(ngModel)]='updateAdmin.adminFirstName'>
-                </td>
-            </tr>
-            <tr>
-                <td><h3>Last Name :</h3></td>
-                <td ><input type="text"  class="len" name="last_name" placeholder="Enter last name" (keypress)='isAName($event)'
-                        [(ngModel)]='updateAdmin.adminLastName'>
-                </td>
-            </tr>
-            <tr>
-                <td><h3>Email :</h3></td>
-                <td ><input type="email" class="len" name="eml" placeholder="Enter email" [(ngModel)]=updateAdmin.adminEmail
-                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-                </td>
-            </tr>
-            <tr>
-                <td><h3>Contact :</h3></td>
-                <td ><input type="tel" name="contact" class="len" placeholder="Enter Contact number"
-                        [(ngModel)]=updateAdmin.adminContact (keypress)='isNumber($event,"phone",10)' minlength="10"
-                        maxlength="10">
-                </td>
-            </tr>
-            <tr>
-                <td><h3>Date Of Birth : </h3></td>
-                <td ><input type="date" class="len" name="dob" [(ngModel)]=updateAdmin.dateOfBirth>
-                </td>
-            </tr>
-            <tr>
-                <td><h3>Gender : </h3></td>
-                <td ><input type="text" class="len" name="gender" placeholder="Gender">
-                </td>
-            </tr>
-            <tr>
-                <td><h3>Password : </h3></td>
-                <td > <input type="password" name="psw" class="len" placeholder="Enter password"
-                        [(ngModel)]=updateAdmin.adminPassword pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
-                </td>
-            </tr>
-            <tr><td></td>
-                <td ><button type="submit" class="btn">Update</button></td>
-            </tr>
-        </table>
-    </form>
+<div class="content">
+<br/>
+    <form ngNativeValidate class="form">
+        <br />
+        <h2 class="name"> Admin ID</h2>
+        <input class="adminid" type="text" name="adminid" [(ngModel)]=updateAdmin.adminId value={{id}} readonly><br>
+        <div id="name">
+            <h2 class="name">
+                Name </h2>
+            <input class="firstname" type="text" name="first_name" placeholder="Enter first name"
+                [(ngModel)]=updateAdmin.adminFirstName value={{adminFirstName}} readonly>
+            <input class="lastname" type="text" name="last_name" placeholder="Enter last name"
+                [(ngModel)]=updateAdmin.adminLastName value={{adminLastName}} readonly>
+        </div>
+        <h2 class="name">
+            Email </h2>
+        <input class="company" type="email" name="eml" placeholder="Enter email" [(ngModel)]=updateAdmin.adminEmail
+            value={{email}} readonly><br>
+        <h2 class="name">
+            Date of Birth</h2>
+        <input class="dob" type="date" name="dob" [(ngModel)]=updateAdmin.dateOfBirth value={{dob}} readonly><br>
+        <h2 class="name">
+            Gender</h2>
+        <input class="company1" type="text" name="gender" placeholder="Male" [(ngModel)]=updateAdmin.adminGender
+            value={{gender}} readonly><br>
+        <h2 class="name">
+            Contact</h2>
+        <input class="number" type="tel" name="phone" id="phone" placeholder="xxx-xxx-xxxx"
+            (keypress)='isNumber($event,"phone",10)' minlength="10" maxlength="10"
+            [(ngModel)]="updateAdmin.adminContact" value={{contact}} readonly>
+        <br>
 
+
+        <br>
+    </form>
 </div>

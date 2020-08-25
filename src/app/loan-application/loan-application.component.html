@@ -29,30 +29,32 @@
             
         </div>
         <div class="form-outer">
-            <form action="#">
+            <form (ngSubmit) = 'applyLoan()'>
                 <div class="page slidepage">
                     <div class="title">Basic Info</div>
                     <div class="field">
                         <div class="label">Customer Id</div>
-                        <input type="text" >
+                        <input type="text" ([ngModel]) = application.customer.customerId value = {{id}} readonly >
                     </div>
                     
                     
                     <div class="field">
                         <div class="label">Gender</div>
-                        <select>
+                        <select ([ngModel]) = application.gender required>
                             <option>Male</option>
                             <option>Female</option>
+
+                        
                             
                         </select>
                     </div>
                     <div class="field">
                         <div class="label">Address</div>
-                        <input type="text"  >
+                        <input type="text" ([ngModel]) = application.address required >
                     </div>
-                    <div class="field">
+                    <div class="field" >
                         <div class="label">Nationality</div>
-                        <input type="text" >
+                        <input type="text" ([ngModel]) = application.Nationality required >
                     </div>
 
                     <div class="field nextBtn">
@@ -67,35 +69,35 @@
                     <div class="title">Loan Eligibility</div>
                     <div class="field">
                         <div class="label">Retirment Age</div>
-                        <input type="number">
+                        <input type="number" ([ngModel]) = application.retirementAge required>
                     </div>
                     <div class="field">
                         <div class="label">Monthly Income</div>
-                        <input type="number">
+                        <input type="number" ([ngModel]) = application.income required>
                     </div>
                     <div class="field">
                         <div class="label">Loan Amount</div>
-                        <input type="number" >
+                        <input type="number" ([ngModel]) = application.retirementAge required>
                     </div>
                     <div class="field">
                         <div class="label">Tenure</div>
-                        <input type="number">
+                        <input type="number" ([ngModel]) = application.tenure required>
                     </div>
                     <div class="field">
                         <div class="label">Down Payment</div>
-                        <input type="text">
+                        <input type="text" ([ngModel]) = application.downPayment required>
                     </div>
                     <div class="field">
                         <div class="label">Number of Dependent</div>
-                        <input type="number" >
+                        <input type="number" ([ngModel]) = application.noOfDependents required >
                     </div>
                     <div class="field">
                         <div class="label">Expenses of Dependent</div>
-                        <input type="number">
+                        <input type="number" ([ngModel]) = application.retirementAge required>
                     </div>
                     <div class="field">
                         <div class="label">Maximum Loan Amount</div>
-                        <input type="number">
+                        <input type="number" ([ngModel]) = application.maxLoanAmount  readonly  >
                     </div>
                     <div class="field btns">
                         <button class="prev-1 prev">Previous</button>
@@ -111,15 +113,15 @@
                    
                     <div class="field">
                         <div class="label">Aadhar Card</div>    
-                        <input type="text" name="aadhar" id="aadhar" placeholder="xxxx-xxxx-xxxx">
+                        <input type="text" name="aadhar" id="aadhar" placeholder="xxxx-xxxx-xxxx" ([ngModel]) = application.aadharNumber required>
                     </div>  
                     <div class="field">
                         <div class="label">Pan Card</div>    
-                        <input type="number">
+                        <input type="text" ([ngModel]) = application.userPAN required>
                     </div>  
                     <div class="field">
                         <div class="label">Property type</div>
-                        <select>
+                        <select >
                             <option>--Choose an option--</option>
                             <option>Home-Construction Loan</option>
                             <option>Home-Extension Loan</option>
@@ -136,11 +138,11 @@
                     </div>
                     <div class="field">
                         <div class="label">Organization Type</div>
-                        <input type="text">
+                        <input type="text" >
                     </div>
                     <div class="field">
                         <div class="label">Organization Name</div>
-                        <input type="text">
+                        <input type="text" ([ngModel]) = application.organisation required>
                     </div>
                     <div class="field">
                         <div class="label">Organization Address</div>

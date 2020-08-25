@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminLoginService } from '../services/admin-login.service';
-import { Application } from '../application';
+
 
 @Component({
   selector: 'app-view-all-applications',

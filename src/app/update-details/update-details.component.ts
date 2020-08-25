@@ -9,10 +9,32 @@ import { UpdateAdminDetailsService } from "../services/update-admin-details.serv
 })
 export class UpdateDetailsComponent implements OnInit {
 
+  id:number;
+  adminFirstName:string;
+  adminLastName:string;
+  email : string;
+  dob : Date;
+  gender:string;
+  contact:string;
+  pass :string;
   updateAdmin: AdminUpdate = new AdminUpdate();
-  data:any;
-  constructor(private router: Router,private service:UpdateAdminDetailsService) { }
-
+  
+  constructor(private service:UpdateAdminDetailsService) {
+    this.id = parseInt(sessionStorage.adminId);
+    this.service.findById(this.id).subscribe(data=>{
+      console.log(data.adminId);
+      this.updateAdmin = data;
+      this.adminFirstName = data.adminFirstName;
+      this.adminLastName = data.adminLastName
+      this.id = sessionStorage.adminId;
+      this.email = data.adminEmail;
+      this.dob = data.dateOfBirth;
+      this.gender = data.adminGender;
+      this.contact=data.adminContact;
+      this.pass = data.adminPassword;
+   //console.log(this.updateAdmin) 
+  })
+  }
   ngOnInit(): void {
   }
 
@@ -33,12 +55,5 @@ export class UpdateDetailsComponent implements OnInit {
     if (isNaN(key) || data.length > l)
       event.preventDefault();
   }
-  update() {
-    alert("Details Updated!!");
-    this.service.update(this.updateAdmin).subscribe(data=>{
-      this.data=data;
-      console.log(data);
-    })
-    this.router.navigate(['/updateDetails']);
-  }
+  
 }

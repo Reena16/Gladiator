@@ -14,11 +14,14 @@ export class AdminLoginService {
 
   loginAdmin(login:AdminLogin):Observable<any>{
     let url="http://localhost:8181/adminLogin";
-   // let url="http://localhost:8181/adminLogin";
     return this.http.post(url,login);
   }
   viewAllusers(){
     let url="http://localhost:8181/viewAllApplications";
+    return this.http.get(url);
+  }
+  viewAllCustomers(){
+    let url="http://localhost:8181/viewAllCustomers";
     return this.http.get(url);
   }
 }
