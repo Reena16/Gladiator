@@ -132,7 +132,7 @@ body{
     .custid{
       position: absolute;
       left:35%;
-      top: 12%;
+      top: 13%;
       line-height: 40px;
       width:480px;
       border-radius: 6px;
@@ -149,7 +149,7 @@ body{
     .name{
    margin-left:10px;
               
-     margin-top:20px;
+     margin-top:26px;
      width: 125px;
               color:black;
               font-size: 18px;
@@ -241,7 +241,7 @@ body{
         text-transform:capitalize;
         font-size:16px;
         left:35%;
-        top:78%;
+        top:77%;
        }
    .phone-number{
         position:absolute;
@@ -249,7 +249,7 @@ body{
         text-transform:capitalize;
         font-size:16px;
         left:50%;
-        top:78%;
+        top:77%;
        }
    .option{
            position:absolute;

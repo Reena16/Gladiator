@@ -4,7 +4,7 @@
     <a href="#"><i class="fa fa-fw fa-user"></i><span>Myprofile</span></a>
     <a routerLink='/updateUserProfile'><i class="fa fa-id-card"></i><span>Update profile</span></a>
 
-    <a href="#"><i class="fa fa-bank"></i><span>Apply Loan</span></a>
+    <a routerLink='/loanapplicationlink'><i class="fa fa-bank"></i><span>Apply Loan</span></a>
     <a href="#"><i class="fa fa-check"></i><span>Track loan status</span></a>
     <a href="#"><i class="fa fa-inr"></i><span>EMI status</span></a>
     <a href="#"><i class="fa fa-cog"></i><span>Settings</span></a>
@@ -61,7 +61,7 @@
         <h2 class="name">
             Password </h2>
         <input class="psw" type="password" name="psw" placeholder="Enter password" [(ngModel)]=customer.customerPassword value ={{pass}}
-            required>
+            readonly>
             <h2 class="name">
                 Confirm password </h2>
             <input class="confirm" type="password" name="conpsw" placeholder="Confirm password"
