@@ -76,7 +76,8 @@ body{
     background-color: gainsboro;
     text-align: center;
     margin-left: 250px;
-   /* background-image: url("src\assets\userDash.png");*/
+   background-image: url("src\assets\custDash3.jpg");
+   
     background-size: cover;
   
     height: 130vh;
@@ -144,7 +145,7 @@ body{
     .name{
    margin-left:10px;
               
-     margin-top:26px;
+     margin-top:19px;
      width: 125px;
               color:black;
               font-size: 18px;
@@ -189,7 +190,7 @@ body{
   .company{
       position: absolute;
        left:35%;
-       top: 42%;
+       top: 41%;
        line-height: 40px;
        width:480px;
           border-radius: 6px;
@@ -199,7 +200,7 @@ body{
    .dob{
           position:absolute;
     left:35%;
-       top:55%;
+       top:54%;
        line-height: 40px;
        width:480px;
           border-radius: 6px;
@@ -213,7 +214,7 @@ body{
     left:35%;
        top:68%;
        line-height: 40px;
-       width:95px;
+       width:135px;
           border-radius: 6px;
        padding: 0 22px;
        font-size: 16px;
@@ -224,7 +225,7 @@ body{
     left:50%;
        top:68%;
        line-height: 40px;
-       width:255px;
+       width:278px;
           border-radius: 6px;
        padding: 0 22px;
        font-size: 16px;

@@ -43,6 +43,15 @@ export class LoanApplicationComponent implements OnInit {
     }
   }
     
+  manageAadharCard(){
+    var data= this.application.aadharNumber;
+    data = data.replace(/ /g, "");
+    var n = data.length / 4;
+    this.application.aadharNumber = data.substring(0, 4);
+      for (var i = 1; i < n; i++) {
+        this.application.aadharNumber += ' ' + data.substring(4 * i, 4 * (i + 1));
+      }
+  }
   
 
 
@@ -56,7 +65,7 @@ export class LoanApplicationComponent implements OnInit {
 
     applyLoan(){
       this.service.applyloan(this.application).subscribe(data=>{
-       // alert(JSON.stringify(data));
+        alert(JSON.stringify(data));
   // alert("Registration successful");
       })
     }

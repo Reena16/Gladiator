@@ -10,13 +10,13 @@ export class Application{
 
 	aadharNumber:string;
 
-	Nationality:string;
+	nationality:string;
 
-	 retirementAge:number;
+	retirementAge:number;
 
 	organisation:string;
 	
-	 income:number;
+	income:number;
 	
 	loanAmount:number;
 
@@ -41,5 +41,23 @@ export class Application{
 	loanStatus:string;
 	
 	appointmentDate:string;
+
+	propertyType : string;
+	
+	propertyLocation : string;
+	
+	propertyCost : number;
+
+	panCard :string;
+	
+	letterOfAgreement :string;
+	
+	 noObjectionCerti :string;
+	
+	saleAgreement :string;
+	
+	aadharCard :string;
+	
+	salarySlip :string;
 	
 }
