@@ -25,7 +25,11 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 import { RegisterComponent } from './register/register.component';
 import { TestComponent } from './test/test.component';
 import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
+import { CustomerDashboardComponent } from './customer-dashboard/customer-dashboard.component';
+import { ViewAllUsersComponent } from './view-all-users/view-all-users.component';
+import { UpdateDetailsComponent } from './update-details/update-details.component';
 import { LoanApplicationComponent } from './loan-application/loan-application.component';
+import { UpdateProfileComponent } from './update-profile/update-profile.component';
 
  FusionChartsModule.fcRoot(
    FusionCharts,
@@ -50,8 +54,14 @@ import { LoanApplicationComponent } from './loan-application/loan-application.co
     TestComponent,
    
     DashboardAdminComponent,
+
+    ViewAllUsersComponent,
    
-    LoanApplicationComponent
+    UpdateDetailsComponent,
+   
+    CustomerDashboardComponent,
+    LoanApplicationComponent,
+    UpdateProfileComponent
   
   ],
   imports: [

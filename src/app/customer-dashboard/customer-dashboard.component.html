@@ -1,0 +1,25 @@
+<div style="background-color: #22242A;">
+    <div class="sidebar">
+     
+        
+        <h2 style="text-align: center; color: white;">Welcome {{customerName}}</h2>
+      
+      <a href="#"><i class="fa fa-fw fa-user"></i><span>Myprofile</span></a>
+      <a routerLink='/updateUserProfile'><i class="fa fa-id-card"></i><span>Update profile</span></a>
+     
+      <a href="#"><i class="fa fa-bank"></i><span>Apply Loan</span></a>
+      <a href="#"><i class="fa fa-check"></i><span>Track loan status</span></a>
+      <a href="#"><i class="fa fa-inr"></i><span>EMI status</span></a>
+      <a href="#"><i class="fa fa-cog"></i><span>Settings</span></a>
+    </div>
+    <!--sidebar end-->
+
+    <div class="content">
+        <form (ngSubmit) = "application()">
+        <button class="btn" type="submit" >Apply now</button>
+    </form>
+    </div>
+
+
+ 
+</div>                       

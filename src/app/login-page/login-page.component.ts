@@ -27,10 +27,10 @@ constructor(private router : Router,private service : LoginserviceService ){}
   }
   loginUser(){
 
-    alert(JSON.stringify(this.login));
+    //alert(JSON.stringify(this.login));
     this.service.loginUser(this.login).subscribe(
       data=>{
-        alert(JSON.stringify(data))
+       // alert(JSON.stringify(data))
      //   this.status=data;
         if(data.status=='SUCCESS'){
           
@@ -39,7 +39,7 @@ constructor(private router : Router,private service : LoginserviceService ){}
           this.message = data.message;
           sessionStorage.setItem('customerId',customerId);
           sessionStorage.setItem('customerFirstName',customerName);
-          //this.router.navigate(['dashboard']);
+          this.router.navigate(['customerDashboard']);
           
         }
 
