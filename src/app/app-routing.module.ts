@@ -17,6 +17,7 @@ import { LoanApplicationComponent } from './loan-application/loan-application.co
 import { UpdateProfileComponent } from "./update-profile/update-profile.component";
 import { AuthGuard } from './auth/auth.guard';
 import { ViewAllApplicationsComponent } from './view-all-applications/view-all-applications.component';
+import { ManageLoanApplicationComponent } from './manage-loan-application/manage-loan-application.component';
 
 const routes: Routes = [
   {
@@ -70,6 +71,9 @@ const routes: Routes = [
   {
 
     path: 'viewAllApplications', component: ViewAllApplicationsComponent, canActivate: [AuthGuard]
+  },
+  {
+    path:'manageLoanStatus',component: ManageLoanApplicationComponent, canActivate: [AuthGuard]
   },
 
 

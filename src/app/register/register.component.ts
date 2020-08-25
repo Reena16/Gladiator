@@ -68,7 +68,6 @@ export class RegisterComponent implements OnInit {
       
       else{
         this.message=data.message;
-
       }
       
     })
