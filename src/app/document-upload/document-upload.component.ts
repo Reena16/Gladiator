@@ -8,28 +8,78 @@ import { ApplyLoanService } from '../apply-loan.service';
 })
 export class DocumentUploadComponent implements OnInit {
 
-  profilePic: any;
-  customerId : any;
+  aadharCard: any;
+  panCard :any;
+	letterOfAgreement :any;
+	noObjectionCerti :any;
+	saleAgreement :any;
+	salarySlip :any;
+  applicationId : any;
 
   constructor(private service:ApplyLoanService) { }
 
   ngOnInit(): void {
-    this.customerId = sessionStorage.getItem('customerId');
+    this.applicationId  = sessionStorage.getItem('applicationId');
   }
 
   onFileChange(event){
-    this.profilePic = event.target.files[0];
+    this.aadharCard= event.target.files[0];
+    this.panCard=event.target.files[0];
+    this.letterOfAgreement=event.target.files[0];
+    this.salarySlip=event.target.files[0];
+    this.noObjectionCerti=event.target.files[0];
+    this.saleAgreement=event.target.files[0];
   }
 
-  upload() {
-    let formData: FormData = new FormData();
-    formData.append('customerId', this.customerId);
-    formData.append('profilePic', this.profilePic);
-    console.log(formData.get('profilePic'));
+  formData: FormData = new FormData()
+  uploadAadharCard() {
+    this.formData.append('applicationId', this.applicationId);
+    this.formData.append('aadharCard', this.aadharCard);
+    this.service.uploadAadharCard(this.formData).subscribe(data => {
+      alert(JSON.stringify(data));
+      console.log(this.formData.get('aadharCard'));
+    })
+  }
+  uploadPanCard() {
+    this.formData.append('applicationId', this.applicationId);
+    this.formData.append('panCard',this.panCard);
+    this.service.uploadPanCard(this.formData).subscribe(data => {
+      alert(JSON.stringify(data));
+      console.log(this.formData.get('panCard'));
+    })
+  }
+  uploadLetterOfAgreement() {
+    this.formData.append('applicationId', this.applicationId);
+    this.formData.append('letterOfAgreement',this.letterOfAgreement);
+    this.service.uploadLetterOfAgreement(this.formData).subscribe(data => {
+      alert(JSON.stringify(data));
+      console.log(this.formData.get('letterOfAgreement'));
+    })
+  }
+
+  uploadSalarySlip() {
+    this.formData.append('applicationId', this.applicationId);
+    this.formData.append('salarySlip',this.salarySlip);
+    this.service.uploadSalarySlip(this.formData).subscribe(data => {
+      alert(JSON.stringify(data));
+      console.log(this.formData.get('aadharCard'));
+    })
+  }
   
-    this.service.upload(formData).subscribe(data => {
+  uploadNOC() {
+    this.formData.append('applicationId', this.applicationId);
+    this.formData.append('noObjectionCerti',this.noObjectionCerti);
+    this.service.uploadNOC(this.formData).subscribe(data => {
       alert(JSON.stringify(data));
     })
   }
 
+  uploadSaleAgreement() {
+    this.formData.append('applicationId', this.applicationId);
+    this.formData.append('saleAgreement',this.saleAgreement);
+    this.service.uploadSaleAgreement(this.formData).subscribe(data => {
+      alert(JSON.stringify(data));
+    })
+  }
+  
 }
