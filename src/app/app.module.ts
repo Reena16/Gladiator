@@ -34,6 +34,7 @@ import { ViewAllApplicationsComponent } from './view-all-applications/view-all-a
 import { ManageLoanApplicationComponent } from './manage-loan-application/manage-loan-application.component';
 
 import { DocumentUploadComponent } from './document-upload/document-upload.component';
+import { ViewAllLoanDetailsComponent } from './view-all-loan-details/view-all-loan-details.component';
 
  FusionChartsModule.fcRoot(
    FusionCharts,
@@ -69,7 +70,9 @@ import { DocumentUploadComponent } from './document-upload/document-upload.compo
     ViewAllApplicationsComponent,
     ManageLoanApplicationComponent,
    
-    DocumentUploadComponent
+    DocumentUploadComponent,
+   
+    ViewAllLoanDetailsComponent
   
   ],
   imports: [

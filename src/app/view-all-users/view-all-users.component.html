@@ -10,7 +10,7 @@
 </div>
 <div class="content">
     <h1 style="text-align: center;">All Customers</h1>
-    <div class="faq-container" *ngFor="let c of allCustomers">
+    <!-- <div class="faq-container" *ngFor="let c of allCustomers">
         <dl class="faq" >
             <dt>
                 <button aria-expanded="false" aria-controls="faq1_desc">{{c.customerId}}
@@ -19,30 +19,30 @@
             <dd>
                 <p id="faq1_desc" class="desc">
                    Hello
-                    <!-- 
-                    <table>    
-                        <tr>       
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Email</th>
-                            <th>Date Of Birth</th>
-                            <th>City</th>
-                            <th>Contact</th>
-                            <th>Employment Type</th>
-                        </tr>
-                        <tr>
-                            <td>{{c.customerFirstName }}</td>
-                            <td>{{c.customerLastName }}</td>
-                            <td>{{c.customerEmail}}</td>
-                            <td>{{c.customerdateOfBirth }}</td>
-                            <td>{{c.customerCity}}</td>
-                            <td>{{c.customerMobileNumber}}</td>
-                            <td>{{c.customerEmploymentType}}</td>
-                        </tr>
                     
-                </table>-->
                 </p>
             </dd>
         </dl>
-    </div>
+    </div> -->
+    <table *ngFor="let c of allCustomers">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Date Of Birth</th>
+            <th>City</th>
+            <th>Contact</th>
+            <th>Employment Type</th>
+        </tr>
+        <tr>
+            <td>{{c.customerFirstName }}</td>
+            <td>{{c.customerLastName }}</td>
+            <td>{{c.customerEmail}}</td>
+            <td>{{c.customerdateOfBirth }}</td>
+            <td>{{c.customerCity}}</td>
+            <td>{{c.customerMobileNumber}}</td>
+            <td>{{c.customerEmploymentType}}</td>
+        </tr>
+
+    </table>
 </div>

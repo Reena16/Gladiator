@@ -10,12 +10,17 @@ export class CustomerDashboardComponent implements OnInit {
 
   customerName:string;
   customerSurname:string;
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+   }
 
   ngOnInit(): void {
-    this.customerName=sessionStorage.getItem("customerFirstName");
-    this.customerSurname=sessionStorage.getItem("customerLastName");
-
+    if (! localStorage.justOnce) {
+      localStorage.setItem("justOnce", "true");
+      window.location.reload();
+  }
+  this.customerName=sessionStorage.getItem("customerFirstName");
+  this.customerSurname=sessionStorage.getItem("customerLastName");
+    
   }
   application(){
     this.router.navigate(['loanapplicationlink']);

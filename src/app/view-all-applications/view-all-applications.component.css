@@ -1,32 +1,6 @@
-.sidebar {
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background-color: #f1f1f1;
-    position:absolute;
-    height: 590px;
-    overflow: auto;
-  }
-  
-  .sidebar a {
-    display: block;
-    color: black;
-    padding: 16px;
-    text-decoration: none;
-  }
-   
-  .sidebar a.active {
-    background-color: #555;
-    color: white;
-  }
-  
-  .sidebar a:hover:not(.active) {
-    background-color: #555;
-    color: white;
-  }
   div.content {
-    padding: 20px 200px;
-    height: 590px;
+    /* padding: 20px 200px; */
+    height: 650px;
     vertical-align: top;
     background-size: 1250px 600px;
     opacity: 0.8;
@@ -57,6 +31,20 @@
       height: auto;
       position: relative;
     }
-    .sidebar a {float: left;}
     div.content {margin-left: 0;}
+  }
+
+  table{
+    border: solid 2px black;
+    width:90%; 
+    /* margin-left:7%;  */
+    /* margin-right:15%; */
+    /* margin-left: 5px; */
+    /* margin-right: 5px; */
+  }
+  th,td{
+    border: 1px solid black;
+  border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
   }

@@ -16,6 +16,19 @@ export class ViewAllApplicationsComponent implements OnInit {
     })
   }
 
+  validateCustomer(applicationId){
+    this.adminService.validateCustomer(applicationId).subscribe(data=>{
+      alert(JSON.stringify(data));
+    })
+    location.reload();
+  }
+  rejectCustomer(applicationId){
+    this.adminService.rejectCustomer(applicationId).subscribe(data=>{
+      alert(JSON.stringify(data));
+    })
+    location.reload();
+  }
+
   ngOnInit(): void {
   }
 
