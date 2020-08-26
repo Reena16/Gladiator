@@ -1,5 +1,6 @@
 import{ Customer } from './customer'
 export class Application{
+	//customerId : number;
     customer:Customer;
     
 	gender:string;
@@ -10,13 +11,13 @@ export class Application{
 
 	aadharNumber:string;
 
-	Nationality:string;
+	nationality:string;
 
-	 retirementAge:number;
+	retirementAge:number;
 
 	organisation:string;
 	
-	 income:number;
+	income:number;
 	
 	loanAmount:number;
 
@@ -26,20 +27,38 @@ export class Application{
 	
 	 maritialStatus:string;
 	
-	 noOfDependents:string;
+	 noOfDependents:number;
 	
-	 depandentMonthlyExpenses;
+	 depandentMonthlyExpenses:number;
 	
-	 personlExpenses;
+	 personlExpenses : number;
 	
-	 existingLoan;
+	 existingLoan : string;
 	
-	 emiExistingLoan;
+	 emiExistingLoan : number;
 	
-	 maxLoanAmount; //read only field based on above parameters and will be calculated on front end
+	 maxLoanAmount :number; //read only field based on above parameters and will be calculated on front end
 	
 	loanStatus:string;
 	
 	appointmentDate:string;
+
+	propertyType : string;
+	
+	propertyLocation : string;
+	
+	propertyCost : number;
+
+	panCard :string;
+	
+	letterOfAgreement :string;
+	
+	 noObjectionCerti :string;
+	
+	saleAgreement :string;
+	
+	aadharCard :string;
+	
+	salarySlip :string;
 	
 }

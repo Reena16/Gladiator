@@ -3,7 +3,6 @@
     <p style="text-align: center;">*See Documents in Download Documents Section*</p>
         <table class="tableApplication" align="center">
             <tr>
-                <th>Application Id</th>
                 <th>Customer ID</th>
                 <th>Retirement Age</th>
                 <th>Income</th>
@@ -17,8 +16,7 @@
                 <th>Validate</th>
                 <th>Reject</th>
             </tr>
-            <tr *ngFor="let a of allApplications">
-                <td>{{a.applicationId}}</td>
+            <tr >
                 <td>{{a.customer}}</td>
                 <td>{{a.retirementAge}}</td>
                 <td>{{a.income}}</td>

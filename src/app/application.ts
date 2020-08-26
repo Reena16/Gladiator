@@ -1,6 +1,7 @@
 import { Customer } from './models/customer';
 
 export class Application{
+    [x: string]: any;
     applicationId:number;
     customer:Customer;
     gender:string;

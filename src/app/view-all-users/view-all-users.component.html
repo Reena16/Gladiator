@@ -9,40 +9,37 @@
     <a href="#">Download Documents</a>
 </div>
 <div class="content">
-    <h1 style="text-align: center;">All Customers</h1>
-    <!-- <div class="faq-container" *ngFor="let c of allCustomers">
-        <dl class="faq" >
-            <dt>
-                <button aria-expanded="false" aria-controls="faq1_desc">{{c.customerId}}
-                </button>
-            </dt>
-            <dd>
-                <p id="faq1_desc" class="desc">
-                   Hello
-                    
-                </p>
-            </dd>
-        </dl>
-    </div> -->
-    <table *ngFor="let c of allCustomers">
-        <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email</th>
-            <th>Date Of Birth</th>
-            <th>City</th>
-            <th>Contact</th>
-            <th>Employment Type</th>
-        </tr>
-        <tr>
-            <td>{{c.customerFirstName }}</td>
-            <td>{{c.customerLastName }}</td>
-            <td>{{c.customerEmail}}</td>
-            <td>{{c.customerdateOfBirth }}</td>
-            <td>{{c.customerCity}}</td>
-            <td>{{c.customerMobileNumber}}</td>
-            <td>{{c.customerEmploymentType}}</td>
-        </tr>
-
-    </table>
+    <div class="con">
+        <h1 style="text-align: center;"> All Customers <img src="./assets/viewUser.jfif" style="width: 10%; height: 10%; padding: 1px 160px; "> </h1>
+        <br /> <br />
+    </div>
+    <div *ngFor="let c of allCustomers">
+        <div class="card">
+            <div> <button>{{c.customerId}}
+                    &nbsp;&nbsp;&nbsp;{{c.customerFirstName}}</button>
+                <div id="clock">
+                    <table style="border: black;width: 840px;height: 100px; box-sizing: border-box;table-layout: auto;">
+                        <tr style="margin-left: 6px;">
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Date Of Birth</th>
+                            <th>City</th>
+                            <th>Contact</th>
+                            <th>Employment Type</th>
+                        </tr>
+                        <tr style="margin-left: 6px;">
+                            <td> {{c.customerFirstName }}</td>
+                            <td> {{c.customerLastName }}</td>
+                            <td> {{c.customerEmail}}</td>
+                            <td> {{c.customerdateOfBirth }}</td>
+                            <td> {{c.customerCity}}</td>
+                            <td> {{c.customerMobileNumber}}</td>
+                            <td> {{c.customerEmploymentType}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

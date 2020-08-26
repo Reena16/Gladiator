@@ -1,168 +1,198 @@
-
-<body>
-  <div class="bg-img">
-    <div class="container">
-        
-        <header>Loan Application Form</header>
-        <div class="progress-bar">
-            <div class="step">
-                <p style="color:#3577da;">Personal Info</p>
-                <div class="bullet">
-                    <span>1</span>
-                </div>
-                <div class="check fas fa-check"></div>
-            </div>
-            <div class="step">
-                <p style="color:#3577da;">Loan Eligibility</p>
-                <div class="bullet">
-                    <span>2</span>
-                </div>  
-                <div class="check fas fa-check"></div>
-            </div>
-            <div class="step">
-                <p style="color:#3577da;">Documents</p>
-                <div class="bullet">
-                    <span>3</span>
-                </div>
-                <div class="check fas fa-check"></div>
-            </div>
+<div class = "main">
+    <h1 style="color: teal;text-align: center; font-weight: bold;">Loan Application form</h1>
+<div class="container">
+    <form class="reg-form" (ngSubmit)="applyLoan()" ngNativeValidate>
+        <fieldset>
             
-        </div>
-        <div class="form-outer">
-            <form (ngSubmit) = 'applyLoan()'>
-                <div class="page slidepage">
-                    <div class="title">Basic Info</div>
-                    <div class="field">
-                        <div class="label">Customer Id</div>
-                        <input type="text" ([ngModel]) = application.customer.customerId value = {{id}} readonly >
-                    </div>
-                    
-                    
-                    <div class="field">
-                        <div class="label">Gender</div>
-                        <select ([ngModel]) = application.gender required>
-                            <option>Male</option>
-                            <option>Female</option>
-
-                        
-                            
-                        </select>
-                    </div>
-                    <div class="field">
-                        <div class="label">Address</div>
-                        <input type="text" ([ngModel]) = application.address required >
-                    </div>
-                    <div class="field" >
-                        <div class="label">Nationality</div>
-                        <input type="text" ([ngModel]) = application.Nationality required >
-                    </div>
-
-                    <div class="field nextBtn">
-                        <button>Next</button>
-                    </div>
+            <legend>
+                <div class="heading">
+                    Basic Info
                 </div>
+            </legend>
+           
+            <fieldset>
+                <legend>
+                    <div class="field-name">Customer Id</div>
+                </legend>
+                <input type="number" name ="id" placeholder="Customer Id"  value ={{id}} readonly>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Gender</div>
+                </legend>
+                <select class="gender-options" name ="gen" [(ngModel)]="application.gender" required>
+                    <option selected disabled hidden>--Choose An Option--</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Address</div>
+                </legend>
+                <input type="text" name ="add" placeholder="Enter Address" [(ngModel)]='application.address' required>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Nationality</div>
+                </legend>
+                <input type="text" placeholder="Enter nationality" name ="nation" [(ngModel)]='application.nationality' required>
+            </fieldset>
+        </fieldset>
+    
 
+   
 
-
-
-                <div class="page">
-                    <div class="title">Loan Eligibility</div>
-                    <div class="field">
-                        <div class="label">Retirment Age</div>
-                        <input type="number" ([ngModel]) = application.retirementAge required>
-                    </div>
-                    <div class="field">
-                        <div class="label">Monthly Income</div>
-                        <input type="number" ([ngModel]) = application.income required>
-                    </div>
-                    <div class="field">
-                        <div class="label">Loan Amount</div>
-                        <input type="number" ([ngModel]) = application.retirementAge required>
-                    </div>
-                    <div class="field">
-                        <div class="label">Tenure</div>
-                        <input type="number" ([ngModel]) = application.tenure required>
-                    </div>
-                    <div class="field">
-                        <div class="label">Down Payment</div>
-                        <input type="text" ([ngModel]) = application.downPayment required>
-                    </div>
-                    <div class="field">
-                        <div class="label">Number of Dependent</div>
-                        <input type="number" ([ngModel]) = application.noOfDependents required >
-                    </div>
-                    <div class="field">
-                        <div class="label">Expenses of Dependent</div>
-                        <input type="number" ([ngModel]) = application.retirementAge required>
-                    </div>
-                    <div class="field">
-                        <div class="label">Maximum Loan Amount</div>
-                        <input type="number" ([ngModel]) = application.maxLoanAmount  readonly  >
-                    </div>
-                    <div class="field btns">
-                        <button class="prev-1 prev">Previous</button>
-                        <button class="next-1 next">Next</button>
-
-                    </div>
+    <fieldset>
+            <legend>
+                <div class="heading">
+                    Loan Eligibility
                 </div>
-
-
-
-                <div class="page">
-                    <div class="title">Document Details</div>
-                   
-                    <div class="field">
-                        <div class="label">Aadhar Card</div>    
-                        <input type="text" name="aadhar" id="aadhar" placeholder="xxxx-xxxx-xxxx" ([ngModel]) = application.aadharNumber required>
-                    </div>  
-                    <div class="field">
-                        <div class="label">Pan Card</div>    
-                        <input type="text" ([ngModel]) = application.userPAN required>
-                    </div>  
-                    <div class="field">
-                        <div class="label">Property type</div>
-                        <select >
-                            <option>--Choose an option--</option>
-                            <option>Home-Construction Loan</option>
-                            <option>Home-Extension Loan</option>
-                            <option>Home-Improvements Loan</option>
-                        </select>
-                    </div>
-                    <div class="field">
-                        <div class="label">Property Location</div>
-                        <input type="text"  (keypress)='isAName($event)'>
-                    </div>
-                    <div class="field">
-                        <div class="label">Property Cost</div>
-                        <input type="number" >
-                    </div>
-                    <div class="field">
-                        <div class="label">Organization Type</div>
-                        <input type="text" >
-                    </div>
-                    <div class="field">
-                        <div class="label">Organization Name</div>
-                        <input type="text" ([ngModel]) = application.organisation required>
-                    </div>
-                    <div class="field">
-                        <div class="label">Organization Address</div>
-                        <input type="text">
-                    </div>
+            </legend>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Retirement Age</div>
+                </legend>
+                <input type="number" placeholder="Enter retirement age" name ="age" [(ngModel)]="application.retirementAge" required>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Monthly Income</div>
+                </legend>
+                <input type="number" placeholder="Enter monthly income"name ="income" [(ngModel)]="application.income">
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Loan Amount</div>
+                </legend>
+                <input type="number" placeholder="Enter loan amount" name ="loan" [(ngModel)]="application.loanAmount">
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Tenure</div>
+                </legend>
+                <input type="number" placeholder="Enter tenure" name ="tenure" [(ngModel)]="application.tenure">
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Down Payment</div>
+                </legend>
+                <input type="number" placeholder="Enter Down Payment" name ="dp" [(ngModel)]="application.downPayment">
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Personal Expenses</div>
+                </legend>
+                <input type="number" name = "pe" placeholder="Enter Personal Expenses" [(ngModel)]="application.personlExpenses" required>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Marital Status</div>
+                </legend>
+                <select class="gender-options" name ="ms" [(ngModel)]="application.maritialStatus" required>
+                    <option selected disabled hidden>--Choose An Option--</option>
+                    <option>Married</option>
+                    <option>Unmarried</option>
                     
-                    <div class="field btns">
-                        <button class="prev-2 prev">Previous</button>
-                        <button class="Submit">Submit</button>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Number of Dependents</div>
+                </legend>
+                <input type="number" placeholder="Number of dependents" name ="noofdep" [(ngModel)]="application.noOfDependents">
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Expenses of Dependents</div>
+                </legend>
+                <input type="number" placeholder="Enter Dependents expenses" name ="dep" [(ngModel)]="application.depandentMonthlyExpenses">
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Any existing Loan?</div>
+                </legend>
+                <select class="gender-options" name ="el" [(ngModel)]="application.existingLoan" required>
+                    <option selected disabled hidden>--Choose An Option--</option>
+                    <option>YES</option>
+                    <option>NO</option>
+                    
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Existing loan EMI(if any)</div>
+                </legend>
+                <input type="number" placeholder="Enter 0 if no pre existing loan" name ="loanemi" [(ngModel)]="application.emiExistingLoan" required>
+            </fieldset>
+           
+           
+        </fieldset>
+    
+    
 
-                    </div>
+    
+       
+
+        <fieldset>
+            <legend>
+                <div class="heading">
+                    Documents
                 </div>
-
-
-               
-            </form>
-        </div>
-    </div>
-
-    <!--<script src="script.js"></script>-->
+            </legend>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Aadhar Card</div>
+                </legend>
+                <input type="text" name ="aadhar" placeholder="Enter Aadhar Number"id="userAadhar"
+                (keypress)='isNumber($event,"userAadhar",12)'  value="" minlength="12"
+                [(ngModel)]="application.aadharNumber" required>
+            <!-- <span class=" error">Oops!! Invalid Aadhar Number</span>> -->
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Pan Card</div>
+                </legend>
+                <input type="text" name ="pan" placeholder="Enter PAN number" [(ngModel)]="application.userPAN" required>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Property Type</div>
+                </legend>
+                <select class="gender-options" name ="pt" [(ngModel)]="application.propertyType">
+                    <option selected disabled hidden>--Choose An Option--</option>
+                    <option>Land purchase</option>
+                    <option>Home purchase</option>
+                    <option>Construction purchase</option>
+                    <option>Home Improvement</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Property Location</div>
+                </legend>
+                <input type="text" name ="prl" placeholder="Enter property location" [(ngModel)]="application.propertyLocation" required>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Property Cost</div>
+                </legend>
+                <input type="number" name ="pc" placeholder="Enter property cost" [(ngModel)]="application.propertyCost" required>
+            </fieldset>
+            
+            <fieldset>
+                <legend>
+                    <div class="field-name">Organization Name</div>
+                </legend>
+                <input type="text" name ="on" placeholder="Enter organisation details" [(ngModel)]="application.organisation" required>
+                </fieldset>
+           
+                <button type="submit">Submit</button>
+            </fieldset>
+    
+        
+    </form>
 </div>
-</body>
 
+</div>

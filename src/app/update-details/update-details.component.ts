@@ -29,7 +29,7 @@ export class UpdateDetailsComponent implements OnInit {
       this.id = sessionStorage.adminId;
       this.email = data.adminEmail;
       this.dob = data.dateOfBirth;
-      this.gender = data.adminGender;
+      this.gender = data.gender;
       this.contact=data.adminContact;
       this.pass = data.adminPassword;
    //console.log(this.updateAdmin) 
