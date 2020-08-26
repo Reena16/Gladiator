@@ -16,7 +16,7 @@
                 <th>Validate</th>
                 <th>Reject</th>
             </tr>
-            <tr >
+            <tr *ngFor="let a of allApplications">
                 <td>{{a.customer}}</td>
                 <td>{{a.retirementAge}}</td>
                 <td>{{a.income}}</td>
