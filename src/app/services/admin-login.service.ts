@@ -17,11 +17,21 @@ export class AdminLoginService {
     return this.http.post(url,login);
   }
   viewAllusers(){
-    let url="http://localhost:8181/viewAllApplications";
+    let url="http://localhost:8181/viewAllPendingApplication";
     return this.http.get(url);
   }
   viewAllCustomers(){
     let url="http://localhost:8181/viewAllCustomers";
     return this.http.get(url);
   }
+
+  validateCustomer(applicationId):Observable<any>{
+    let url="http://localhost:8181/validateCustomer";
+    return this.http.post(url,applicationId);
+  }
+  rejectCustomer(applicationId):Observable<any>{
+    let url="http://localhost:8181/rejectCustomer";
+    return this.http.post(url,applicationId);
+  }
+
 }

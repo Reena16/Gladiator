@@ -34,6 +34,7 @@ import { ViewAllApplicationsComponent } from './view-all-applications/view-all-a
 import { ManageLoanApplicationComponent } from './manage-loan-application/manage-loan-application.component';
 
 import { DocumentUploadComponent } from './document-upload/document-upload.component';
+import { ViewAllLoanDetailsComponent } from './view-all-loan-details/view-all-loan-details.component';
 import { ViewUserProfileComponent } from './view-user-profile/view-user-profile.component';
 import { ChecklistComponent } from './checklist/checklist.component';
 
@@ -75,7 +76,9 @@ import { ChecklistComponent } from './checklist/checklist.component';
    
     ViewUserProfileComponent,
    
-    ChecklistComponent
+    ChecklistComponent,
+    ViewAllLoanDetailsComponent,
+    
   
   ],
   imports: [

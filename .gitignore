@@ -52,3 +52,5 @@ src/services/admin-login.service.ts
 src/assets/admin.gif
 src/assets/admin.jpg
 src/assets/admin.png
+package.json
+package-lock.json

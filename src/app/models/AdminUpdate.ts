@@ -6,5 +6,5 @@ export class AdminUpdate{
     adminEmail:string;
     adminContact:string;
     dateOfBirth:Date;
-    adminGender:string;
+    gender:string;
 }

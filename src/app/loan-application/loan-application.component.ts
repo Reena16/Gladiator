@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApplyLoanService } from "../apply-loan.service";
 import { Customer } from '../models/customer';
 import { Application } from '../application';
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -18,7 +18,7 @@ export class LoanApplicationComponent implements OnInit {
   maxLoan :number;
   applicationId : number;
   
-  constructor(private service : ApplyLoanService,private router : Router) {
+  constructor(private service : ApplyLoanService, private router: Router) {
     this.id = parseInt(sessionStorage.customerId);
     this.service.findById(this.id).subscribe(data=>{
      console.log(data);
@@ -69,19 +69,12 @@ export class LoanApplicationComponent implements OnInit {
     }
 
     applyLoan(){
-      console.log(this.application);
+         console.log(this.application);
        this.service.applyloan(this.application).subscribe(data=>{
         let appId = JSON.parse(JSON.stringify(data));
-
-        
         sessionStorage.setItem('applicationId',appId);
         console.log(sessionStorage.applicationId);
-       //this.appId = parseInt(sessionStorage.getItem('applicationId'));
-        //console.log(this.appId);
-
-         alert(JSON.stringify(data));
-         this.router.navigate(['documentUpload']);
-  
+         this.router.navigate(['/documentUpload'])
       })
     }
   
