@@ -17,7 +17,7 @@ export class ApplyLoanService {
     return this.http.post("http://localhost:8181/applyLoan",apply);
   }
   upload(formData: FormData) {
-    let url='http://localhost:8181/documentUpload';
+    let url='http://localhost:8181/aadharUpload';
     return this.http.post(url, formData);
   }
 }

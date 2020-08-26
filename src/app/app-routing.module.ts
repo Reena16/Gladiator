@@ -19,6 +19,9 @@ import { AuthGuard } from './auth/auth.guard';
 import { ViewAllApplicationsComponent } from './view-all-applications/view-all-applications.component';
 import { ManageLoanApplicationComponent } from './manage-loan-application/manage-loan-application.component';
 import { ViewUserProfileComponent } from "./view-user-profile/view-user-profile.component";
+import { DocumentUploadComponent } from "./document-upload/document-upload.component";
+
+
 const routes: Routes = [
   {
     path: '', component: HomePageComponent
@@ -77,7 +80,11 @@ const routes: Routes = [
   },
   {
     path:'viewUserLink',component: ViewUserProfileComponent, canActivate: [AuthGuard]
+  },
+  {
+    path:'documentUpload',component: DocumentUploadComponent, canActivate: [AuthGuard]
   }
+
 
 
 

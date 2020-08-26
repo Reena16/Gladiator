@@ -35,6 +35,7 @@ import { ManageLoanApplicationComponent } from './manage-loan-application/manage
 
 import { DocumentUploadComponent } from './document-upload/document-upload.component';
 import { ViewUserProfileComponent } from './view-user-profile/view-user-profile.component';
+import { ChecklistComponent } from './checklist/checklist.component';
 
  FusionChartsModule.fcRoot(
    FusionCharts,
@@ -72,7 +73,9 @@ import { ViewUserProfileComponent } from './view-user-profile/view-user-profile.
    
     DocumentUploadComponent,
    
-    ViewUserProfileComponent
+    ViewUserProfileComponent,
+   
+    ChecklistComponent
   
   ],
   imports: [
