@@ -22,6 +22,7 @@ import { ViewUserProfileComponent } from "./view-user-profile/view-user-profile.
 import { ViewAllLoanDetailsComponent } from './view-all-loan-details/view-all-loan-details.component';
 import { ViewLoanByIdComponent } from './view-loan-by-id/view-loan-by-id.component';
 import { TrackStatusComponent } from './track-status/track-status.component';
+import { DocumentUploadComponent } from './document-upload/document-upload.component';
 const routes: Routes = [
   {
     path: '', component: HomePageComponent
@@ -89,7 +90,10 @@ const routes: Routes = [
   },
   {
     path:'trackApplication',component: TrackStatusComponent, canActivate: [AuthGuard]
+  },{
+    path:'documentUpload',component:DocumentUploadComponent, canActivate: [AuthGuard]
   }
+
 
 
 

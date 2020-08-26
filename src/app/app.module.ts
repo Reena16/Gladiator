@@ -38,6 +38,7 @@ import { ViewAllLoanDetailsComponent } from './view-all-loan-details/view-all-lo
 import { ViewUserProfileComponent } from './view-user-profile/view-user-profile.component';
 import { ViewLoanByIdComponent } from './view-loan-by-id/view-loan-by-id.component';
 import { TrackStatusComponent } from './track-status/track-status.component';
+import { ChecklistComponent } from './checklist/checklist.component';
 
  FusionChartsModule.fcRoot(
    FusionCharts,
@@ -75,10 +76,14 @@ import { TrackStatusComponent } from './track-status/track-status.component';
    
     DocumentUploadComponent,
    
+    ViewUserProfileComponent,
+   
+    ChecklistComponent,
     ViewAllLoanDetailsComponent,
     ViewUserProfileComponent,
     ViewLoanByIdComponent,
     TrackStatusComponent
+    
   
   ],
   imports: [

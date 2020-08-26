@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DocumentUploadComponent } from './document-upload.component';
+import { ChecklistComponent } from './checklist.component';
 
-describe('DocumentUploadComponent', () => {
-  let component: DocumentUploadComponent;
-  let fixture: ComponentFixture<DocumentUploadComponent>;
+describe('ChecklistComponent', () => {
+  let component: ChecklistComponent;
+  let fixture: ComponentFixture<ChecklistComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DocumentUploadComponent ]
+      declarations: [ ChecklistComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DocumentUploadComponent);
+    fixture = TestBed.createComponent(ChecklistComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

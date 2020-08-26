@@ -4,6 +4,7 @@ import { Login } from "./models/login";
 import { Observable } from 'rxjs';
 import { FetchById } from './models/FetchById';
 import { SendStatusDto } from './models/StatusSendDto';
+import { ForgotPassword } from './models/forgotPassword';
 
 
 @Injectable({
@@ -27,4 +28,9 @@ export class LoginserviceService {
     let url="http://localhost:8181/searchStatus";
     return this.http.post(url,searchData);
   }
+forgotPassword(forgot:ForgotPassword):Observable<any>{
+  let url:'http://localhost:8181/forgotPassword';
+  return this.http.post(url,forgot);
+}
+
 }
