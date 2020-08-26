@@ -19,6 +19,9 @@ import { AuthGuard } from './auth/auth.guard';
 import { ViewAllApplicationsComponent } from './view-all-applications/view-all-applications.component';
 import { ManageLoanApplicationComponent } from './manage-loan-application/manage-loan-application.component';
 import { ViewUserProfileComponent } from "./view-user-profile/view-user-profile.component";
+import { ViewAllLoanDetailsComponent } from './view-all-loan-details/view-all-loan-details.component';
+import { ViewLoanByIdComponent } from './view-loan-by-id/view-loan-by-id.component';
+import { TrackStatusComponent } from './track-status/track-status.component';
 const routes: Routes = [
   {
     path: '', component: HomePageComponent
@@ -77,6 +80,15 @@ const routes: Routes = [
   },
   {
     path:'viewUserLink',component: ViewUserProfileComponent, canActivate: [AuthGuard]
+  },
+  {
+    path:'viewAllLoan',component: ViewAllLoanDetailsComponent, canActivate: [AuthGuard]
+  },
+  {
+    path:'viewLoanDetails',component: ViewLoanByIdComponent, canActivate: [AuthGuard]
+  },
+  {
+    path:'trackApplication',component: TrackStatusComponent, canActivate: [AuthGuard]
   }
 
 

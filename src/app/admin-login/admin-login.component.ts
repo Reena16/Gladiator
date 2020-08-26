@@ -13,7 +13,11 @@ export class AdminLoginComponent implements OnInit {
   data: any;
   message: any;
   status;
-  constructor(private service: AdminLoginService, private router: Router) { }
+  constructor(private service: AdminLoginService, private router: Router) {
+    if(sessionStorage.getItem('customerId')!=null || sessionStorage.getItem('adminId')!=null){
+      this.router.navigate(['/homeLink']);
+    }
+   }
 
   ngOnInit(): void {
   }

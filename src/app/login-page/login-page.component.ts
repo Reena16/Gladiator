@@ -12,7 +12,11 @@ export class LoginPageComponent implements OnInit {
 
  login = new Login();
 
-constructor(private router : Router,private service : LoginserviceService ){}
+constructor(private router : Router,private service : LoginserviceService ){
+  if(sessionStorage.getItem('customerId')!=null || sessionStorage.getItem('adminId')!=null){
+    this.router.navigate(['/homeLink']);
+  }
+}
 
   ngOnInit(): void {
   }

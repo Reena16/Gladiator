@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminLoginService } from '../services/admin-login.service';
 
 @Component({
   selector: 'app-view-all-loan-details',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewAllLoanDetailsComponent implements OnInit {
 
-  constructor() { }
+  allLoan:any;
+  constructor(private loan:AdminLoginService) {
+    loan.viewAllLoan().subscribe(data=>{
+      this.allLoan=data;
+    })
+   }
 
   ngOnInit(): void {
   }

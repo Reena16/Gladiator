@@ -32,7 +32,7 @@
             
            
           </div>
-          <a routerLink='/dashboardAdmin' *ngIf='flag' >Dashboard</a>
+          <a routerLink='{{routerLink}}' *ngIf='flag' >Dashboard</a>
           <a routerLink='/infoLink' style="float: right;" (click)='logOut()' *ngIf='flag'>LogOut</a>
         </div>
 
