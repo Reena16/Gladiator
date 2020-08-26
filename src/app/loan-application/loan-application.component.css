@@ -2,14 +2,11 @@
   background: url("src\assets\AppForm.jpeg");
   background-size:cover ;
   
-  height: 2500px;
+  height: 2700px;
   
 }
 
-.container3{
-  height: 90px;
-  position: relative;
-}
+
 .container{
   
   position: relative;
@@ -17,43 +14,19 @@
   left: 50%;
   transform: translate(-50%,-50%);
   width: 40%;
-  background: rgba(0, 0, 0, 0.4);
+  /* background: rgba(0, 0, 0, 0.4); */
   padding: 20px;
   border-radius:20px ;
   box-shadow:0 0 10px 2px black;
   
   height: 460px;
 }
-.container1{
-  position: absolute;
-  top: 193%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  width: 40%;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 20px;
-  border-radius:20px ;
-  box-shadow:0 0 10px 2px black;
-  
-  height: 870px;
-}
-.container2{
-  position: absolute;
-  top: 355%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  width: 40%;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 20px;
-  border-radius:20px ;
-  box-shadow:0 0 10px 2px black;
-  
-  height: 850px;
-}
+
+
 .heading{
   margin: 10px;
   font-size: 15px;
-  color: white;
+  color: teal;
   text-align: center;
   font-variant: small-caps;
 }
@@ -62,11 +35,13 @@
   text-align: center;
 }
 fieldset{
+  
+
   border: 1px solid rgba(255, 255, 255, 0.5);
   margin: 10px;
 }
 .field-name{
-  color: white;
+  color: teal;
   font-size: 20px;
 }
 input, .gender-options{

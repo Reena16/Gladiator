@@ -19,14 +19,17 @@ export class LoanApplicationComponent implements OnInit {
   constructor(private service : ApplyLoanService) {
     this.id = parseInt(sessionStorage.customerId);
     this.service.findById(this.id).subscribe(data=>{
-    console.log(data);
-    // this.customer = data;
-    // this.application.customer = this.customer;
-    this.id = sessionStorage.customerId;
+     console.log(data);
+     this.customer = data;
+     this.application.customer = this.customer;
+
+    //this.id = sessionStorage.customerId;
+    //this.application.customerId = parseInt(sessionStorage.customerId);
     this.application.customer = data;
-    this.application.customer.customerId = sessionStorage.customerId;
+    console.log(this.application.customer);
+    console.log(this.application.customer.customerId );
     //this.maxLoan = data.maxLoanAmount;
-   })
+    })
   }
 
   ngOnInit(): void {
@@ -64,9 +67,10 @@ export class LoanApplicationComponent implements OnInit {
     }
 
     applyLoan(){
-      this.service.applyloan(this.application).subscribe(data=>{
-        alert(JSON.stringify(data));
-  // alert("Registration successful");
+      console.log(this.application);
+       this.service.applyloan(this.application).subscribe(data=>{
+         alert(JSON.stringify(data));
+  
       })
     }
   

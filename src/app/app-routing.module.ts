@@ -18,7 +18,7 @@ import { UpdateProfileComponent } from "./update-profile/update-profile.componen
 import { AuthGuard } from './auth/auth.guard';
 import { ViewAllApplicationsComponent } from './view-all-applications/view-all-applications.component';
 import { ManageLoanApplicationComponent } from './manage-loan-application/manage-loan-application.component';
-
+import { ViewUserProfileComponent } from "./view-user-profile/view-user-profile.component";
 const routes: Routes = [
   {
     path: '', component: HomePageComponent
@@ -75,6 +75,9 @@ const routes: Routes = [
   {
     path:'manageLoanStatus',component: ManageLoanApplicationComponent, canActivate: [AuthGuard]
   },
+  {
+    path:'viewUserLink',component: ViewUserProfileComponent, canActivate: [AuthGuard]
+  }
 
 
 
