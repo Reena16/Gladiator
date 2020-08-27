@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UpdateUserService } from '../update-user.service';
 import { Customer } from '../models/customer';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-user-profile',
@@ -20,7 +21,10 @@ export class ViewUserProfileComponent implements OnInit {
   pass :string;
   customer= new Customer();
 
-  constructor(private service:UpdateUserService) {
+  constructor(private service:UpdateUserService, private router:Router) {
+    if(sessionStorage.getItem('adminId')!=null){
+      this.router.navigate(['/homeLink']);
+    }
     this.id = parseInt(sessionStorage.customerId);
     this.service.findById(this.id).subscribe(data=>{
       console.log(data.customerId);

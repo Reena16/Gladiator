@@ -19,6 +19,9 @@ export class LoanApplicationComponent implements OnInit {
   applicationId : number;
   
   constructor(private service : ApplyLoanService, private router: Router) {
+    if(sessionStorage.getItem('adminId')!=null){
+      this.router.navigate(['/homeLink']);
+    }
     this.id = parseInt(sessionStorage.customerId);
     this.service.findById(this.id).subscribe(data=>{
      console.log(data);

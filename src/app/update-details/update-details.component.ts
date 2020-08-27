@@ -19,7 +19,10 @@ export class UpdateDetailsComponent implements OnInit {
   pass :string;
   updateAdmin: AdminUpdate = new AdminUpdate();
   
-  constructor(private service:UpdateAdminDetailsService) {
+  constructor(private service:UpdateAdminDetailsService, private router:Router) {
+    if(sessionStorage.getItem('customerId')!=null || sessionStorage.getItem('adminId')!=null){
+      this.router.navigate(['/homeLink']);
+    }
     this.id = parseInt(sessionStorage.adminId);
     this.service.findById(this.id).subscribe(data=>{
       console.log(data.adminId);

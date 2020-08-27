@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoginserviceService } from '../loginservice.service';
 import { FetchById } from '../models/FetchById';
 import { UpdateUserService } from '../update-user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-loan-by-id',
@@ -15,7 +16,10 @@ export class ViewLoanByIdComponent implements OnInit {
   viewLoanById = new FetchById();
   loanDetails:any;
   id:number;
-  constructor(private seeLoan:LoginserviceService,private service:UpdateUserService) {
+  constructor(private seeLoan:LoginserviceService,private service:UpdateUserService,private router:Router) {
+    if(sessionStorage.getItem('adminId')!=null){
+      this.router.navigate(['/homeLink']);
+    }
     this.id = parseInt(sessionStorage.customerId);
     console.log(this.id);
     // this.viewLoanById.id= parseInt(sessionStorage.customerId);

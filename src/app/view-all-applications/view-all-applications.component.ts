@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminLoginService } from '../services/admin-login.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -10,7 +11,10 @@ import { AdminLoginService } from '../services/admin-login.service';
 export class ViewAllApplicationsComponent implements OnInit {
 
   allApplications:any;
-  constructor(private adminService:AdminLoginService) { 
+  constructor(private adminService:AdminLoginService, private router:Router) { 
+    if(sessionStorage.getItem('customerId')!=null){
+      this.router.navigate(['/homeLink']);
+    }
     adminService.viewAllusers().subscribe(data=>{
       this.allApplications=data;
     })

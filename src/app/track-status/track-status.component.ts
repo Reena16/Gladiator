@@ -4,6 +4,7 @@ import { FetchById } from '../models/FetchById';
 import { SendStatusDto } from '../models/StatusSendDto';
 import { timer } from 'rxjs';
 import { UpdateUserService } from '../update-user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-track-status',
@@ -19,7 +20,10 @@ export class TrackStatusComponent implements OnInit {
   statusResult: FetchById = new FetchById();
   searchData: SendStatusDto = new SendStatusDto();
   message:any;
-  constructor(private search: LoginserviceService,private service: UpdateUserService) {
+  constructor(private search: LoginserviceService,private service: UpdateUserService,private router:Router) {
+    if(sessionStorage.getItem('adminId')!=null){
+      this.router.navigate(['/homeLink']);
+    }
     this.id = parseInt(sessionStorage.customerId);
     this.service.findById(this.id).subscribe(data=>{
       console.log(data.customerId);

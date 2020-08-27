@@ -3,6 +3,7 @@ import { ChecklistResult } from "../models/ChecklistResult";
 import { SendStatusDto } from '../models/StatusSendDto';
 import { LoginserviceService } from '../loginservice.service';
 import { UpdateUserService } from '../update-user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-checklist',
@@ -18,7 +19,10 @@ export class ChecklistComponent implements OnInit {
   statusResult: ChecklistResult = new ChecklistResult();
   searchData: SendStatusDto = new SendStatusDto();
   message:any;
-  constructor(private search: LoginserviceService,private service:UpdateUserService) {
+  constructor(private search: LoginserviceService,private service:UpdateUserService,private router:Router) {
+    if(sessionStorage.getItem('adminId')!=null){
+      this.router.navigate(['/homeLink']);
+    }
     this.id = parseInt(sessionStorage.customerId);
     this.service.findById(this.id).subscribe(data=>{
       console.log(data.customerId);
