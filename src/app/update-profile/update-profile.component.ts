@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Customer } from '../models/customer';
 import { UpdateUserService } from "../update-user.service";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-update-profile',
@@ -21,7 +22,10 @@ export class UpdateProfileComponent implements OnInit {
   pass :string;
   customer= new Customer();
 
-  constructor(private service:UpdateUserService) {
+  constructor(private service:UpdateUserService, private router:Router) {
+    if(sessionStorage.getItem('adminId')!=null){
+      this.router.navigate(['/homeLink']);
+    }
     this.id = parseInt(sessionStorage.customerId);
     this.service.findById(this.id).subscribe(data=>{
       console.log(data.customerId);
@@ -88,7 +92,9 @@ export class UpdateProfileComponent implements OnInit {
   update(){
     this.service.update(this.customer).subscribe(data=>{
 
-      alert(JSON.stringify(data));
+      //alert(JSON.stringify(data));
+      alert("Your details were successfully updated");
+      
     })
 
   }

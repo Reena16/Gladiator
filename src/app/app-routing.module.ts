@@ -23,6 +23,7 @@ import { ViewAllLoanDetailsComponent } from './view-all-loan-details/view-all-lo
 import { ViewLoanByIdComponent } from './view-loan-by-id/view-loan-by-id.component';
 import { TrackStatusComponent } from './track-status/track-status.component';
 import { DocumentUploadComponent } from './document-upload/document-upload.component';
+import { ChecklistComponent } from "./checklist/checklist.component";
 const routes: Routes = [
   {
     path: '', component: HomePageComponent
@@ -45,10 +46,10 @@ const routes: Routes = [
   {
     path: 'infoLink', component: BankInfoComponent
   }, {
-    path: 'forgotPasswordLink', component: ForgotPasswordComponent
+    path: 'forgotPasswordLink', component: ForgotPasswordComponent, canActivate: [AuthGuard]
   },
   {
-    path: 'resetPasswordLink', component: ResetPasswordComponent
+    path: 'resetPasswordLink', component: ResetPasswordComponent, canActivate: [AuthGuard]
   },
   {
     path: 'registerLink', component: RegisterComponent
@@ -92,6 +93,8 @@ const routes: Routes = [
     path:'trackApplication',component: TrackStatusComponent, canActivate: [AuthGuard]
   },{
     path:'documentUpload',component:DocumentUploadComponent, canActivate: [AuthGuard]
+  },{
+    path:'checklistLink',component:ChecklistComponent, canActivate: [AuthGuard]
   }
 
 

@@ -34,7 +34,7 @@ constructor(private router : Router,private service : LoginserviceService ){
     //alert(JSON.stringify(this.login));
     this.service.loginUser(this.login).subscribe(
       data=>{
-        alert(JSON.stringify(data))
+       // alert(JSON.stringify(data))
      //   this.status=data;
         if(data.status=='SUCCESS'){
           let flag = 'true';
