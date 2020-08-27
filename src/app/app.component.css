@@ -1,15 +1,11 @@
 * {
-    /* box-sizing: border-box; */
-    box-sizing: initial;
-    
+    box-sizing: initial; 
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
   .header{
     text-align: center;
-    /* background-color: whitesmoke; */
 }
   body {
-    /* padding: 10px; */
     background: white;
   }
   
@@ -18,21 +14,14 @@
     text-align: center;
     color: white;
     background: #0F0F0F;
-    /* 2f2f31 */  
     margin-top: 20px;
-    /* width: 80%; */
     margin: auto;
-    /* position: relative; */
   }
- 
-  
-  /* Style the top navigation bar */
+
   .topnav {
     overflow: hidden; /* if the content is exceeding the size of your div it will not dispaly the extra content MEANS scroll bar lag jaega*/
     background-color:#3b526f;
-    /* background-color: white; */
-    /* width: 80%; */
-    /* margin: auto; */
+    position: fixed;
     max-height: 50px;
     height: 10%;
     border-bottom: 3px solid black;
