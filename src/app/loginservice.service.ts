@@ -28,6 +28,10 @@ export class LoginserviceService {
     let url="http://localhost:8181/searchStatus";
     return this.http.post(url,searchData);
   }
+  checklist(searchData:SendStatusDto):Observable<any>{
+    let url="http://localhost:8181/generateCheckList";
+    return this.http.post(url,searchData);
+  }
 forgotPassword(forgot:ForgotPassword):Observable<any>{
   let url:'http://localhost:8181/forgotPassword';
   return this.http.post(url,forgot);

@@ -3,6 +3,7 @@ import { LoginserviceService } from '../loginservice.service';
 import { FetchById } from '../models/FetchById';
 import { SendStatusDto } from '../models/StatusSendDto';
 import { timer } from 'rxjs';
+import { UpdateUserService } from '../update-user.service';
 
 @Component({
   selector: 'app-track-status',
@@ -10,14 +11,27 @@ import { timer } from 'rxjs';
   styleUrls: ['./track-status.component.css']
 })
 export class TrackStatusComponent implements OnInit {
+  customerName:string;
+  customerSurname:string;
+  id:number;
   showFlag: boolean = false;
   applicationId: number;
   statusResult: FetchById = new FetchById();
   searchData: SendStatusDto = new SendStatusDto();
   message:any;
-  constructor(private search: LoginserviceService) {
-    // this.searchData.customerid = parseInt(sessionStorage.customerId);
-  }
+  constructor(private search: LoginserviceService,private service: UpdateUserService) {
+    this.id = parseInt(sessionStorage.customerId);
+    this.service.findById(this.id).subscribe(data=>{
+      console.log(data.customerId);
+     
+      this.customerName = data.customerFirstName;
+      this.customerSurname = data.customerLastName;
+    //this.id = data.customerId;
+      this.id = sessionStorage.customerId;
+     
+
+      //alert("Information updated successfully");
+    })  }
   submit() {
     this.searchData.applicationId = this.applicationId;
     this.searchData.customerid = parseInt(sessionStorage.getItem('customerId'));

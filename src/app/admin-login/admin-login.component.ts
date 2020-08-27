@@ -31,7 +31,7 @@ export class AdminLoginComponent implements OnInit {
   }
   loginAdmin() {
     this.service.loginAdmin(this.login).subscribe(data => {
-      alert(JSON.stringify(data));
+      //alert(JSON.stringify(data));
       this.status = data;
       if (data.status == "SUCCESS") {
         let flag = 'true';

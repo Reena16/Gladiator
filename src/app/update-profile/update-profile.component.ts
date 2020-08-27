@@ -88,7 +88,9 @@ export class UpdateProfileComponent implements OnInit {
   update(){
     this.service.update(this.customer).subscribe(data=>{
 
-      alert(JSON.stringify(data));
+      //alert(JSON.stringify(data));
+      alert("Your details were successfully updated");
+      
     })
 
   }
