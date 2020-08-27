@@ -33,4 +33,9 @@ forgotPassword(forgot:ForgotPassword):Observable<any>{
   return this.http.post(url,forgot);
 }
 
+viewLoanByLoanId(id):Observable<any>{
+  let url = "http://localhost:8181/viewByLoanId";
+    return this.http.post(url, id); 
+}
+
 }

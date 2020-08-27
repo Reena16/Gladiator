@@ -39,6 +39,7 @@ import { ViewUserProfileComponent } from './view-user-profile/view-user-profile.
 import { ViewLoanByIdComponent } from './view-loan-by-id/view-loan-by-id.component';
 import { TrackStatusComponent } from './track-status/track-status.component';
 import { ChecklistComponent } from './checklist/checklist.component';
+import { EmiBreakageComponent } from './emi-breakage/emi-breakage.component';
 
  FusionChartsModule.fcRoot(
    FusionCharts,
@@ -82,7 +83,8 @@ import { ChecklistComponent } from './checklist/checklist.component';
     ViewAllLoanDetailsComponent,
     ViewUserProfileComponent,
     ViewLoanByIdComponent,
-    TrackStatusComponent
+    TrackStatusComponent,
+    EmiBreakageComponent
     
   
   ],
