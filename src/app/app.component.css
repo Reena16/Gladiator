@@ -21,7 +21,6 @@
   .topnav {
     overflow: hidden; /* if the content is exceeding the size of your div it will not dispaly the extra content MEANS scroll bar lag jaega*/
     background-color:#3b526f;
-    position: fixed;
     max-height: 50px;
     height: 10%;
     border-bottom: 3px solid black;

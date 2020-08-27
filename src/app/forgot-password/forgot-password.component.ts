@@ -32,7 +32,7 @@ export class ForgotPasswordComponent implements OnInit {
            if(data.status=='SUCCESS')
            {
              this.message=""
-             this.userOtp=data.userOTP
+             this.userOtp=data.otp
              this.show=false;
              this.show1=true;
              this.show2=false;
