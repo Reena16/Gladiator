@@ -66,7 +66,7 @@
                 Confirm password </h2>
             <input class="confirm" type="password" name="conpsw" placeholder="Confirm password"
                 [(ngModel)]='confirmPass' required>
-            <span *ngIf='!confirmPassword()' style="color: red; font-weight: bold;">Oops!! Password mismatch</span>
+            <span *ngIf='passFlag' style="color: red; font-weight: bold;">Oops!! Password mismatch</span>
 
         <button class="btn" type="submit">Update Info</button>
 

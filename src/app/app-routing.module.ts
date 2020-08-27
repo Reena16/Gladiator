@@ -46,10 +46,10 @@ const routes: Routes = [
   {
     path: 'infoLink', component: BankInfoComponent
   }, {
-    path: 'forgotPasswordLink', component: ForgotPasswordComponent, canActivate: [AuthGuard]
+    path: 'forgotPasswordLink', component: ForgotPasswordComponent
   },
   {
-    path: 'resetPasswordLink', component: ResetPasswordComponent, canActivate: [AuthGuard]
+    path: 'resetPasswordLink', component: ResetPasswordComponent
   },
   {
     path: 'registerLink', component: RegisterComponent

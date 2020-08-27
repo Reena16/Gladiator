@@ -43,6 +43,7 @@ export class ChecklistComponent implements OnInit {
     this.search.checklist(this.searchData).subscribe(data => {
       console.log(data);
       if (data.status == 'SUCCESS') {
+
         this.showFlag = true;
         this.statusResult.applicationId = data.applicationId;
         this.statusResult.customerId = data.customerId;

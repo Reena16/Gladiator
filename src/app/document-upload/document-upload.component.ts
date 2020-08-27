@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApplyLoanService } from '../apply-loan.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-document-upload',
@@ -16,7 +17,7 @@ export class DocumentUploadComponent implements OnInit {
 	salarySlip :any;
   applicationId : any;
 
-  constructor(private service:ApplyLoanService) { }
+  constructor(private service:ApplyLoanService,private router:Router) { }
 
   ngOnInit(): void {
     this.applicationId  = sessionStorage.getItem('applicationId');
@@ -36,7 +37,7 @@ export class DocumentUploadComponent implements OnInit {
     this.formData.append('applicationId', this.applicationId);
     this.formData.append('aadharCard', this.aadharCard);
     this.service.uploadAadharCard(this.formData).subscribe(data => {
-      alert(JSON.stringify(data));
+      alert("Aadhar Card Uploaded Successfully");
       console.log(this.formData.get('aadharCard'));
     })
   }
@@ -44,7 +45,7 @@ export class DocumentUploadComponent implements OnInit {
     this.formData.append('applicationId', this.applicationId);
     this.formData.append('panCard',this.panCard);
     this.service.uploadPanCard(this.formData).subscribe(data => {
-      alert(JSON.stringify(data));
+      alert("Pan Card Uploaded Successfully");
       console.log(this.formData.get('panCard'));
     })
   }
@@ -52,7 +53,7 @@ export class DocumentUploadComponent implements OnInit {
     this.formData.append('applicationId', this.applicationId);
     this.formData.append('letterOfAgreement',this.letterOfAgreement);
     this.service.uploadLetterOfAgreement(this.formData).subscribe(data => {
-      alert(JSON.stringify(data));
+      alert("Letter Of Agreement Uploaded Successfully");
       console.log(this.formData.get('letterOfAgreement'));
     })
   }
@@ -61,7 +62,7 @@ export class DocumentUploadComponent implements OnInit {
     this.formData.append('applicationId', this.applicationId);
     this.formData.append('salarySlip',this.salarySlip);
     this.service.uploadSalarySlip(this.formData).subscribe(data => {
-      alert(JSON.stringify(data));
+      alert("Salary Slip Uploaded Successfully");
       console.log(this.formData.get('aadharCard'));
     })
   }
@@ -70,7 +71,7 @@ export class DocumentUploadComponent implements OnInit {
     this.formData.append('applicationId', this.applicationId);
     this.formData.append('noObjectionCerti',this.noObjectionCerti);
     this.service.uploadNOC(this.formData).subscribe(data => {
-      alert(JSON.stringify(data));
+      alert("NOC Uploaded Successfully");
     })
   }
 
@@ -78,8 +79,12 @@ export class DocumentUploadComponent implements OnInit {
     this.formData.append('applicationId', this.applicationId);
     this.formData.append('saleAgreement',this.saleAgreement);
     this.service.uploadSaleAgreement(this.formData).subscribe(data => {
-      alert(JSON.stringify(data));
+      alert("Sales Agreement Uploaded Successfully");
     })
+  }
+
+  redirect(){
+    this.router.navigate(['/customerDashboard']);
   }
   
 }

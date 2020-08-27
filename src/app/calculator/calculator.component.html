@@ -31,15 +31,15 @@
     <form class="emiform" #calForm='ngForm' (ngSubmit)='calculateemi(calForm)' style="border-top:solid black 1px;">
         <div class="container" style="line-height: 30px;">
             <!-- <label for="fname">Loan Amount( ₹ )</label><br> -->
-            <p>Loan Amount( ₹ ) <span style="float: right;"><input type="text" [(ngModel)]='loanamount'
+            <p>Loan Amount( ₹ ) <span style="float: right;"><input type="number" [(ngModel)]='loanamount'
                         name="loanamount" required></span></p>
             <input type="range" min="50000" max="50000000" value="50000" [(ngModel)]='loanamount' name="loanamount"
                 class="slider" required>
             <br>
-            <p>Tenure( Years ) <span style="float: right; box-sizing: border-box;"><input type="text"
+            <p>Tenure( Years ) <span style="float: right; box-sizing: border-box;"><input type="number"
                         [(ngModel)]='tenure' name="tenure" required><br></span></p>
             <input type="range" min="1" max="30" value="15" [(ngModel)]='tenure' name="tenure" class="slider" required>
-            <p>Rate Of Interest( % )<span style="float: right; box-sizing: border-box;"><input type="text" value="8.5"
+            <p>Rate Of Interest( % )<span style="float: right; box-sizing: border-box;"><input type="number" value="8.5"
                         [(ngModel)]='roi' name="roi" required><br></span></p>
             <input type="range" min="5" max="24" step="0.5" value="5" [(ngModel)]='roi' name="roi" class="slider" required>
             <p><button id="calculate" [disabled]="!(loanamount)">Calculate</button><br></p>
@@ -79,7 +79,7 @@
     </h2>
     <form #eligForm='ngForm' (ngSubmit)='calculateEligibility(eligForm)' style="border-top:solid black 1px;">
         <div class="container" style="line-height: 30px;">
-            <p>Monthly Income ( ₹ ) <span style="float: right;"><input type="text" [(ngModel)]='monthlyincome'
+            <p>Monthly Income ( ₹ ) <span style="float: right;"><input type="number" [(ngModel)]='monthlyincome'
                         name="monthlyincome"></span></p>
             <input type="range" min="10000" max="15000000" value="50000" [(ngModel)]='monthlyincome'
                 name="monthlyincome" class="slider">

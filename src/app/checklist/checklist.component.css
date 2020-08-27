@@ -7,12 +7,12 @@
   
   
   .profilecard{
-    width: 450px;
-    margin-left: 150px;
+    width: 750px;
+    margin-left: 100px;
     position: relative;
     top:15%;
     left: 14%;
-    height: 400px;
+    height: 480px;
     background:white;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5);
     
@@ -89,4 +89,16 @@
   
   label #sidebar_btn:hover{
     color: #19B3D3;
+  }
+
+  input{
+    padding: 10px;
+  }
+  button{
+    padding: 10px;
+    color: white;
+    background-color: #3b526f;
+  }
+  button:hover{
+    opacity: 0.8;
   }

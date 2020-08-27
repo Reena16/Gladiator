@@ -20,7 +20,7 @@ export class UpdateDetailsComponent implements OnInit {
   updateAdmin: AdminUpdate = new AdminUpdate();
   
   constructor(private service:UpdateAdminDetailsService, private router:Router) {
-    if(sessionStorage.getItem('customerId')!=null || sessionStorage.getItem('adminId')!=null){
+    if(sessionStorage.getItem('customerId')!=null){
       this.router.navigate(['/homeLink']);
     }
     this.id = parseInt(sessionStorage.adminId);

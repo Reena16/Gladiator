@@ -20,6 +20,7 @@ export class UpdateProfileComponent implements OnInit {
   city:string;
   contact:string;
   pass :string;
+  passFlag:boolean=false;
   customer= new Customer();
 
   constructor(private service:UpdateUserService, private router:Router) {
@@ -90,12 +91,18 @@ export class UpdateProfileComponent implements OnInit {
 
   
   update(){
-    this.service.update(this.customer).subscribe(data=>{
+    if(this.customer.customerPassword==this.confirmPass){
+      this.service.update(this.customer).subscribe(data=>{
 
-      //alert(JSON.stringify(data));
-      alert("Your details were successfully updated");
-      
-    })
+        //alert(JSON.stringify(data));
+        alert("Your details were successfully updated");
+        
+      })
+    }
+    else{
+      this.passFlag=true;
+    }
+    
 
   }
 
