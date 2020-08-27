@@ -33,5 +33,9 @@ export class AdminLoginService {
     let url="http://localhost:8181/rejectCustomer";
     return this.http.post(url,applicationId);
   }
-
+  
+  viewAllLoan():Observable<any>{
+    let url = "http://localhost:8181/viewAllLoan";
+    return this.http.get(url);
+  }
 }

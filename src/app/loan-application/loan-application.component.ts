@@ -16,6 +16,7 @@ export class LoanApplicationComponent implements OnInit {
   customer=new Customer();
   application = new Application();
   maxLoan :number;
+  applicationId : number;
   
   constructor(private service : ApplyLoanService, private router: Router) {
     this.id = parseInt(sessionStorage.customerId);

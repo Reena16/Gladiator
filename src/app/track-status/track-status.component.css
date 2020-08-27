@@ -3,10 +3,10 @@
      background-image: url("src\assets\custDash3.jpg"); 
     background-size: cover;
     height: 745px;
-}
-
-
-.profilecard{
+  }
+  
+  
+  .profilecard{
     width: 450px;
     margin-left: 150px;
     position: relative;
@@ -17,40 +17,40 @@
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5);
     
     
-}
-/* .content{
+  }
+  /* .content{
     padding: 20px;
     float: left;
-}
-.content p{
+  }
+  .content p{
     color: #4b4fe2;
     margin-right: 16px;
-} */
-.content{
+  } */
+  .content{
     padding: 20px;
-}
-.content p{
+  }
+  .content p{
    
     margin-right: 16px;
-}
-.lab{
+  }
+  .lab{
     color: black;
     float: left;
-}
-.val{
+  }
+  .val{
     font-size: 18px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color:  tomato;
     
-}
-.sidebar {
+  }
+  .sidebar {
     margin-top: 0%;
     background: #22242A;
     padding-top: 0px;
     position: absolute;
     left: 0;
     width: 250px;
-    height: 745px;
+    height: 746px;
     transition: 0.5s;
     transition-property: left;
   }
